@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <head>
+        <h1>Kraft Diagram Database</h1>
+    </head>
+    <body>
+        <table id="strata">
+            <tr>
+                <th>Dimension q</th>
+                <th>Signature</th>
+                <th>Strata</th>
+                <th>Word(s)</th>
+                <th>EO Type</th>
+                <th>Hirashita Slope</th>
+                <th>Indecomposible</th>
+            </tr>
+        </table>
+
+        <table>
+
+        <script>
+
+            main();
+
+            async function main(){
+                const strata = await getData();
+
+                const strata_table = document.querySelector("#strata");
+
+                for (s of strata) {
+                    strata_table.innerHTML += `
+                    <tr>
+                        <td>${s.q}</td>
+                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
+                        <td>${s.Strata.toString().split(',').join(', ')}</td>
+                        <td>${s.Words.join(', ')}</td>
+                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
+                        <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
+                        <td>${s.Indecomposible}</td>
+                    </tr>
+                    `;
+                }
+            }
+
+            async function getData() {
+                const response = await fetch("All_Strata.json");
+                const data = await response.json();
+
+                return data;
+            }
+        </script>
+
+    </body>
+</html>
