@@ -107,80 +107,45 @@
                 var tr = table_body.querySelectorAll("tr");
                 table_body.innerHTML = "";
 
-                if (q == "all"){
-                    for (s of strata) {
-                        let new_row = `
-                        <tr>
-                            <td>${s.q.toString()}</td>
-                            <td>(${s.Signature.toString().split(',').join(', ')})</td>
-                            <td>${s.Strata.toString().split(',').join(', ')}</td>
-                            <td>${s.Words.join(', ')}</td>
-                            <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                            <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
-                            <td>[${s.TL_Slope.toString()}]</td>
-                            <td>${s.Indecomposible}</td>
-                        </tr>`;
-                        table_body.insertAdjacentHTML("beforeend", new_row);
-                    }
-                } else {
+                // Filter elements based on their dimension (q)
+                filtered_strata = strata.filter(function(element) {
+                    var q = document.getElementById("q").value;
                     var comp_q = document.getElementById("q_filter").value;
 
-                    if (comp_q == "eq"){
-                        for (s of strata){
-                            if (s.q.toString() == q) {
-
-                                let new_row = `
-                                    <tr>
-                                    <td>${s.q.toString()}</td>
-                                    <td>(${s.Signature.toString().split(',').join(', ')})</td>
-                                    <td>${s.Strata.toString().split(',').join(', ')}</td>
-                                    <td>${s.Words.join(', ')}</td>
-                                    <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                                    <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
-                                    <td>[${s.TL_Slope.toString()}]</td>
-                                    <td>${s.Indecomposible}</td>
-                                </tr>`;
-                                table_body.insertAdjacentHTML("beforeend", new_row);
-                            }
+                    if (q == "all") {
+                        return true;
+                    }
+                    if (comp_q == "eq") {
+                        if (element.q.toString() == q) {
+                            return true;
                         }
-                    } else if (comp_q == "ge"){
-                        for (s of strata){
-                            if (parseInt(s.q, 10) >= parseInt(q, 10)) {
-
-                                let new_row = `
-                                    <tr>
-                                    <td>${s.q.toString()}</td>
-                                    <td>(${s.Signature.toString().split(',').join(', ')})</td>
-                                    <td>${s.Strata.toString().split(',').join(', ')}</td>
-                                    <td>${s.Words.join(', ')}</td>
-                                    <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                                    <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
-                                    <td>[${s.TL_Slope.toString()}]</td>
-                                    <td>${s.Indecomposible}</td>
-                                </tr>`;
-                                table_body.insertAdjacentHTML("beforeend", new_row);
-                            }
+                    } else if (comp_q == "le") {
+                        if (element.q.toString() <= q) {
+                            return true;
                         }
-                    } else if (comp_q == "le"){
-                        for (s of strata){
-                            if (parseInt(s.q, 10) <= parseInt(q, 10)) {
-
-                                let new_row = `
-                                    <tr>
-                                    <td>${s.q.toString()}</td>
-                                    <td>(${s.Signature.toString().split(',').join(', ')})</td>
-                                    <td>${s.Strata.toString().split(',').join(', ')}</td>
-                                    <td>${s.Words.join(', ')}</td>
-                                    <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                                    <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
-                                    <td>[${s.TL_Slope.toString()}]</td>
-                                    <td>${s.Indecomposible}</td>
-                                </tr>`;
-                                table_body.insertAdjacentHTML("beforeend", new_row);
-                            }
+                    } else if (comp_q == "ge") {
+                        if (element.q.toString() >= q) {
+                            return true;
                         }
                     }
+                    return false;
+                });
+                
+                for (s of filtered_strata) {
+                    let new_row = `
+                    <tr>
+                        <td>${s.q.toString()}</td>
+                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
+                        <td>${s.Strata.toString().split(',').join(', ')}</td>
+                        <td>${s.Words.join(', ')}</td>
+                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
+                        <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
+                        <td>[${s.TL_Slope.toString()}]</td>
+                        <td>${s.Indecomposible}</td>
+                    </tr>`;
+                    table_body.insertAdjacentHTML("beforeend", new_row);
                 }
+
             }
         </script>
         <!-- END JAVASCRIPT -->
