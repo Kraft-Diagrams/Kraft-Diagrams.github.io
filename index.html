@@ -64,6 +64,24 @@
         </select>
         </p>
 
+        <p>Sort by Signature: (q-b, b) 
+        <select name="b" id="b" onchange="filter_data()">
+            <option value="all" selected="selected">All Signatures</option>
+            <option value="1">b = 1</option>
+            <option value="2">b = 2</option>
+            <option value="3">b = 3</option>
+            <option value="4">b = 4</option>
+            <option value="5">b = 5</option>
+            <option value="6">b = 6</option>
+            <option value="7">b = 7</option>
+            <option value="8">b = 8</option>
+            <option value="9">b = 9</option>
+            <option value="10">b = 10</option>
+        </select>
+        </p>
+
+
+
         <!-- Create a table to store all of the strata information -->
         <table id="strata">
             <thead>
@@ -99,11 +117,12 @@
 
             async function filter_data() {
 
+                // Get the data we'll be filtering
                 const strata = await getData();
 
-                // If q is set to "all", then display the entire table. Otherwise, filter.
-                var q = document.getElementById("q").value;
                 var table_body = document.getElementById("strata-body");
+
+                // Delete what is currently in the table, because we are going to replace it
                 var tr = table_body.querySelectorAll("tr");
                 table_body.innerHTML = "";
 
@@ -130,6 +149,20 @@
                     }
                     return false;
                 });
+
+                // Filter elements based on signature (a, b)
+                filtered_strata = filtered_strata.filter(function(element){
+                    var b = document.getElementById("b").value;
+
+                    if (b == "all") {
+                        return true;
+                    }
+                    if (element.Signature[1].toString() == b) {
+                        return true;
+                    }
+                    return false;
+                });
+
                 
                 for (s of filtered_strata) {
                     let new_row = `
