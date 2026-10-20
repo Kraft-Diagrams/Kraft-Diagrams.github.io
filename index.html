@@ -1,27 +1,72 @@
 <!DOCTYPE html>
 <html>
     <style>
+       th, td {
+        border: 1px solid rgb(160 160 160);
+        padding: 8px 10px;
+        }
+
+        th[scope="col"] {
+            background-color: #505050;
+            color: white;
+        }
+
+        th[scope="row"] {
+            background-color: #d6ecd4;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        tr:nth-of-type(even) {
+            background-color: #eeeeee;
+        }
+
         table {
-            font-family: arial, sans-serif;
             border-collapse: collapse;
-            width: 100%;
+            border: 2px solid rgb(140 140 140);
+            font-family: sans;
+            font-size: 1rem;
+            letter-spacing: 1px;
         }
 
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #dddddd;
+        caption {
+            caption-side: bottom;
+            padding: 10px;
         }
     </style>
     <head>
         <h1>Kraft Diagram Database</h1>
     </head>
     <body>
+
+        <!-- FILTER THE DATA -->
+        <!-- Filter by Dimension -->
+        <p>Sort by Dimension: q 
+        <select name="q_filter" id="q_filter" onchange="filter_data()">
+            <option value="eq" selected="selected">=</option>
+            <option value="le">&le;</option>
+            <option value="ge">&ge;</option>
+        </select>
+        <select name="q" id="q" onchange="filter_data()">
+            <option value="all">All q</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected="selected">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        </p>
+
+        <!-- Create a table to store all of the strata information -->
         <table id="strata">
+            <thead>
             <tr>
                 <th>Dimension q</th>
                 <th>Signature</th>
@@ -29,43 +74,116 @@
                 <th>Word(s)</th>
                 <th>EO Type</th>
                 <th>Hirashita Slope</th>
+                <th>TL Slope</th>
                 <th>Indecomposible</th>
             </tr>
+            </thead>
+            <tbody id="strata-body">
+            </tbody>
         </table>
 
         <table>
 
+        <!-- BEGIN JAVASCRIPT -->
         <script>
 
-            main();
+            filter_data();
 
-            async function main(){
-                const strata = await getData();
-
-                const strata_table = document.querySelector("#strata");
-
-                for (s of strata) {
-                    strata_table.innerHTML += `
-                    <tr>
-                        <td>${s.q}</td>
-                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
-                        <td>${s.Strata.toString().split(',').join(', ')}</td>
-                        <td>${s.Words.join(', ')}</td>
-                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                        <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
-                        <td>${s.Indecomposible}</td>
-                    </tr>
-                    `;
-                }
-            }
-
+            // Grab, parse, and return the information from the JSON file
             async function getData() {
                 const response = await fetch("All_Strata.json");
                 const data = await response.json();
 
                 return data;
             }
+
+            async function filter_data() {
+
+                const strata = await getData();
+
+                // If q is set to "all", then display the entire table. Otherwise, filter.
+                var q = document.getElementById("q").value;
+                var table_body = document.getElementById("strata-body");
+                var tr = table_body.querySelectorAll("tr");
+                table_body.innerHTML = "";
+
+                if (q == "all"){
+                    for (s of strata) {
+                        let new_row = `
+                        <tr>
+                            <td>${s.q.toString()}</td>
+                            <td>(${s.Signature.toString().split(',').join(', ')})</td>
+                            <td>${s.Strata.toString().split(',').join(', ')}</td>
+                            <td>${s.Words.join(', ')}</td>
+                            <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
+                            <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
+                            <td>[${s.TL_Slope.toString()}]</td>
+                            <td>${s.Indecomposible}</td>
+                        </tr>`;
+                        table_body.insertAdjacentHTML("beforeend", new_row);
+                    }
+                } else {
+                    var comp_q = document.getElementById("q_filter").value;
+
+                    if (comp_q == "eq"){
+                        for (s of strata){
+                            if (s.q.toString() == q) {
+
+                                let new_row = `
+                                    <tr>
+                                    <td>${s.q.toString()}</td>
+                                    <td>(${s.Signature.toString().split(',').join(', ')})</td>
+                                    <td>${s.Strata.toString().split(',').join(', ')}</td>
+                                    <td>${s.Words.join(', ')}</td>
+                                    <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
+                                    <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
+                                    <td>[${s.TL_Slope.toString()}]</td>
+                                    <td>${s.Indecomposible}</td>
+                                </tr>`;
+                                table_body.insertAdjacentHTML("beforeend", new_row);
+                            }
+                        }
+                    } else if (comp_q == "ge"){
+                        for (s of strata){
+                            if (parseInt(s.q, 10) >= parseInt(q, 10)) {
+
+                                let new_row = `
+                                    <tr>
+                                    <td>${s.q.toString()}</td>
+                                    <td>(${s.Signature.toString().split(',').join(', ')})</td>
+                                    <td>${s.Strata.toString().split(',').join(', ')}</td>
+                                    <td>${s.Words.join(', ')}</td>
+                                    <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
+                                    <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
+                                    <td>[${s.TL_Slope.toString()}]</td>
+                                    <td>${s.Indecomposible}</td>
+                                </tr>`;
+                                table_body.insertAdjacentHTML("beforeend", new_row);
+                            }
+                        }
+                    } else if (comp_q == "le"){
+                        for (s of strata){
+                            if (parseInt(s.q, 10) <= parseInt(q, 10)) {
+
+                                let new_row = `
+                                    <tr>
+                                    <td>${s.q.toString()}</td>
+                                    <td>(${s.Signature.toString().split(',').join(', ')})</td>
+                                    <td>${s.Strata.toString().split(',').join(', ')}</td>
+                                    <td>${s.Words.join(', ')}</td>
+                                    <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
+                                    <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
+                                    <td>[${s.TL_Slope.toString()}]</td>
+                                    <td>${s.Indecomposible}</td>
+                                </tr>`;
+                                table_body.insertAdjacentHTML("beforeend", new_row);
+                            }
+                        }
+                    }
+                }
+            }
         </script>
+        <!-- END JAVASCRIPT -->
 
     </body>
 </html>
