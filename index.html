@@ -80,6 +80,10 @@
         </select>
         </p>
 
+        <p>
+        Indecomposible?
+        <input type="checkbox" id="indecomposible" onchange="filter_data()">
+        </p>
 
 
         <!-- Create a table to store all of the strata information -->
@@ -161,6 +165,16 @@
                         return true;
                     }
                     return false;
+                });
+
+                // Filter based on whether it is indecomposible
+                filtered_strata = filtered_strata.filter(function(element){
+                    if (document.getElementById("indecomposible").checked && element.Indecomposible.toString() == "true") {
+                        return true;
+                    } else if (document.getElementById("indecomposible").checked && element.Indecomposible.toString() == "false") {
+                        return false;
+                    }
+                    return true;
                 });
 
                 
