@@ -43,6 +43,7 @@
 
         <!-- FILTER THE DATA -->
         <!-- Filter by Dimension -->
+        <form id="filter">
         <p>Sort by Dimension: q 
         <select name="q_filter" id="q_filter" onchange="filter_data()">
             <option value="eq" selected="selected">=</option>
@@ -85,6 +86,8 @@
         <input type="checkbox" id="indecomposible" onchange="filter_data()">
         </p>
 
+        <p><input type="reset" onclick="filter_data()"/></p>
+        </form>
 
         <!-- Create a table to store all of the strata information -->
         <table id="strata">
