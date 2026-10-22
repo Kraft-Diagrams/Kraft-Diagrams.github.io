@@ -564,9 +564,24 @@ def words_to_Wyle(words):
     
     return strata
 
+"""
+Determine whether a strata intersects, is contained in, is disjoint from, or unknown with the SS Locus
+- If the Hirashita Slope is 1/2, return "Contained In"
+- If 1/2 is in the TL slope, then return "Intersects"
+- If 0 is in the TL slope, then return "Disjoint"
+"""
+def SSLocus_Interaction(TL_Slopes, HS_Slope):
+    if HS_Slope == (1, 2):
+        return "Contained In"
+    if TL_Slopes[0][0] == "0":
+        return "Disjoint"
+    if "1/2" in ", ".join(TL_Slopes):
+        return "Intersects"
+    return "Unknown"
+
 if __name__ == "__main__":
     
-    all_strata = {"q":[], "Signature":[], "Strata":[], "Words":[], "EO_Type":[], "Hirashita_Slope": [], "TL_Slope": [], "Indecomposible": [], "Graph": []}
+    all_strata = {"q":[], "Signature":[], "Strata":[], "Words":[], "EO_Type":[], "Hirashita_Slope": [], "TL_Slope": [], "Indecomposible": [], "SS_Locus_Interaction":[], "Graph": []}
     
     max_q = 10
     for q in range(1, max_q+1):
@@ -579,6 +594,7 @@ if __name__ == "__main__":
                 HS_slope = hirashita_slope(EO_Type)
                 TL_slopes = TL_slope(words)
                 decomposible = is_decomposable(q, words)
+                SS_locus = SSLocus_Interaction(TL_slopes, HS_slope)
                 
                 # Add info to dataframe
                 all_strata["q"].append(q)
@@ -589,6 +605,7 @@ if __name__ == "__main__":
                 all_strata["Hirashita_Slope"].append(HS_slope)
                 all_strata["TL_Slope"].append(", ".join(TL_slopes))
                 all_strata["Indecomposible"].append(not decomposible)
+                all_strata["SS_Locus_Interaction"].append(SS_locus)
                 all_strata["Graph"].append(diagram)
         print(q)
     

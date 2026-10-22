@@ -86,6 +86,17 @@
         <input type="checkbox" id="indecomposible" onchange="filter_data()">
         </p>
 
+        <p>
+            Interaction with the SS Locus
+            <select name="SS Locus" id="SS Locus" onchange="filter_data()">
+                <option value="all" selected="selected">All Interactions</option>
+                <option value="Disjoint">Disjoint</option>
+                <option value="Contained In">Contained In</option>
+                <option value="Intersects">Intersects</option>
+                <option value="Unknown">Unknown</option>
+            </select>
+        </p>
+
         <p><input type="reset" onclick="filter_data()"/></p>
         </form>
 
@@ -101,13 +112,12 @@
                 <th>Hirashita Slope</th>
                 <th>TL Slope</th>
                 <th>Indecomposible</th>
+                <th>SS Locus</th>
             </tr>
             </thead>
             <tbody id="strata-body">
             </tbody>
         </table>
-
-        <table>
 
         <!-- BEGIN JAVASCRIPT -->
         <script>
@@ -180,6 +190,14 @@
                     return true;
                 });
 
+                // Filter based on the strata's interaction with the SS Locus
+                filtered_strata = filtered_strata.filter(function(element){
+                    var interaction = document.getElementById("SS Locus").value;
+                    if (interaction == "all" || interaction == element.SS_Locus_Interaction.toString()){
+                        return true;
+                    }
+                    return false;
+                });
                 
                 for (s of filtered_strata) {
                     let new_row = `
@@ -192,6 +210,7 @@
                         <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
                         <td>[${s.TL_Slope.toString()}]</td>
                         <td>${s.Indecomposible}</td>
+                        <td>${s.SS_Locus_Interaction}</td>
                     </tr>`;
                     table_body.insertAdjacentHTML("beforeend", new_row);
                 }
