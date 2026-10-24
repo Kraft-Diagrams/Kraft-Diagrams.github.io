@@ -16,7 +16,6 @@ async function filter_data() {
     var table_body = document.getElementById("strata-body");
 
     // Delete what is currently in the table, because we are going to replace it
-    var tr = table_body.querySelectorAll("tr");
     table_body.innerHTML = "";
 
     // Filter elements based on their dimension (q)
@@ -77,7 +76,7 @@ async function filter_data() {
 
     for (s of filtered_strata) {
         let new_row = `
-                    <tr>
+                    <tr id="${s.q.toString().concat('__', s.Strata.toString().split(',').join('_'))}" onClick="draw_kraft_diagram(this.id)">
                         <td>${s.q.toString()}</td>
                         <td>(${s.Signature.toString().split(',').join(', ')})</td>
                         <td>${s.Strata.toString().split(',').join(', ')}</td>
@@ -90,5 +89,76 @@ async function filter_data() {
                     </tr>`;
         table_body.insertAdjacentHTML("beforeend", new_row);
     }
+    console.log(table_body);
 
 }
+
+async function draw_kraft_diagram(strata_id) {
+
+    // Get the data we'll be filtering
+    var strata = await getData();
+    const strata_q = strata_id.split('__')[0];
+    const strata_indices = strata_id.split('__')[1].split('_').join(',');
+
+    // Find the particular strata clicked on in the JSON file 
+    // This is super inefficient, but I'll deal with that later
+    strata = strata.filter(function (element) {
+        if (element.q.toString() == strata_q && element.Strata.toString() == strata_indices) {
+            return true;
+        }
+        return false;
+    });
+
+    console.log(strata);
+
+    const my_div = document.getElementById("plot_graph");
+    my_div.innerHTML += `<svg id="myPlot" style="width:500px;height:500px"></svg>`;
+
+// Set Dimensions
+const xSize = 500; 
+const ySize = 500;
+const margin = 40;
+const xMax = xSize - margin*2;
+const yMax = ySize - margin*2;
+
+// Create Random Points
+const numPoints = 100;
+const data = [];
+for (let i = 0; i < numPoints; i++) {
+  data.push([Math.random() * xMax, Math.random() * yMax]);
+}
+
+// Append SVG Object to the Page
+const svg = d3.select("#myPlot")
+  .append("svg")
+  .append("g")
+  .attr("transform","translate(" + margin + "," + margin + ")");
+
+// X Axis
+const x = d3.scaleLinear()
+  .domain([0, 500])
+  .range([0, xMax]);
+
+svg.append("g")
+  .attr("transform", "translate(0," + yMax + ")")
+  .call(d3.axisBottom(x));
+
+// Y Axis
+const y = d3.scaleLinear()
+  .domain([0, 500])
+  .range([ yMax, 0]);
+
+svg.append("g")
+  .call(d3.axisLeft(y));
+
+// Dots
+svg.append('g')
+  .selectAll("dot")
+  .data(data).enter()
+  .append("circle")
+  .attr("cx", function (d) { return d[0] } )
+  .attr("cy", function (d) { return d[1] } )
+  .attr("r", 3)
+  .style("fill", "Red");
+
+    }

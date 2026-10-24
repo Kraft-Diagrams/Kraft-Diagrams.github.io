@@ -38,6 +38,7 @@
     </style>
     <head>
         <h1>Kraft Diagram Database</h1>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
     </head>
     <body>
         <!-- IMPORT JAVASCRIPT-->
@@ -70,6 +71,7 @@
         <p>Sort by Signature: (q-b, b) 
         <select name="b" id="b" onchange="filter_data()">
             <option value="all" selected="selected">All Signatures</option>
+            <option value="0">b = 0</option>
             <option value="1">b = 1</option>
             <option value="2">b = 2</option>
             <option value="3">b = 3</option>
@@ -120,6 +122,10 @@
             <tbody id="strata-body">
             </tbody>
         </table>
+
+        <div id="plot_graph">
+            Hello!
+        </div>
 
     </body>
 </html>
