@@ -96,6 +96,22 @@ def build_diagram(q, gamma_sig):
         
     return diagram
 
+""" 
+Function d3_diagram(diagram)
+    - diagram: A dictionary created by build_diagram() holding the graph of the strata
+Convert the diagram into something easier to graph using d3
+"""
+def d3_diagram(diagram):
+    d3diagram = []
+    for key, val in diagram.items():
+        if val[1] == "V":
+            new_edge = {"source":str(val[0]), "target":str(key), "type":"V"}
+        else:
+            new_edge = {"source":str(key), "target":str(val[0]), "type":"F"}
+        d3diagram.append(new_edge)
+    return d3diagram
+            
+
 """
 Function plot_diagram(diagram, gamma=[])
    - diagram: A dictionary created by build_diagram() holding the graph of the strata
@@ -163,8 +179,8 @@ def plot_diagram(diagram, gamma=None):
     # Label the figure
     if not (a == 0 and b == 0 and len(gamma) == 0):
         plt.title(f"Signature ({a}, {b})\n$\\gamma_{{{", ".join([str(i) for i in gamma])}}}$", fontsize=16)
+    plt.savefig(f"kraft-diagrams/q{q}__{"_".join([str(i) for i in gamma])}.png")
     plt.show()
-    plt.savefig("Diagram.png")
 
 """
 Function find_words(diagram)
@@ -606,7 +622,7 @@ if __name__ == "__main__":
                 all_strata["TL_Slope"].append(", ".join(TL_slopes))
                 all_strata["Indecomposible"].append(not decomposible)
                 all_strata["SS_Locus_Interaction"].append(SS_locus)
-                all_strata["Graph"].append(diagram)
+                all_strata["Graph"].append(d3_diagram(diagram))
         print(q)
     
     all_strata = pd.DataFrame(all_strata)

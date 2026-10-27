@@ -89,8 +89,6 @@ async function filter_data() {
                     </tr>`;
         table_body.insertAdjacentHTML("beforeend", new_row);
     }
-    console.log(table_body);
-
 }
 
 async function draw_kraft_diagram(strata_id) {
@@ -108,5 +106,129 @@ async function draw_kraft_diagram(strata_id) {
         }
         return false;
     });
+
+    strata = strata[0];
+
+    // Add place for an SVG in the webpage
+    var plot_div = document.getElementById("plot_graph");
+    plot_div.innerHTML = `<svg width="400" height="${strata.q * 120}"></svg>`
+
+    svg = d3.select("svg");
+
+    svg.append("defs")
+            .append("marker")
+            .attr("id", "arrowV")
+            .attr("viewBox", "0 0 10 10")
+            .attr("refX", 5)
+            .attr("refY", 5)
+            .attr("markerWidth", 6)
+            .attr("markerHeight", 6)
+            .attr("orient", "auto-start-reverse")
+            .append("path")
+            .attr("d", "M0,0L10,5L0,10")
+            .attr("fill", "purple");
+
+    svg.append("defs")
+            .append("marker")
+            .attr("id", "arrowF")
+            .attr("viewBox", "0 0 10 10")
+            .attr("refX", 5)
+            .attr("refY", 5)
+            .attr("markerWidth", 6)
+            .attr("markerHeight", 6)
+            .attr("orient", "auto-start-reverse")
+            .append("path")
+            .attr("d", "M0,0L10,5L0,10")
+            .attr("fill", "orange");
+
+    var source = "";
+    var target = "";
+    var type = "";
+
+    // Make the title
+    svg.append("text")
+            .attr("x", 200)
+            .attr("y", 35)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "20px")
+            .style("dominant-baseline", "middle")
+            .style("fill", "black")
+            .text(`q = ${strata.q}, Strata = [${strata.Strata.toString().split(",").join(", ")}]`);
+
+    // Draw the edges first
+    console.log(strata.Graph);
+    for (edge of strata.Graph){
+        source = edge.source.substring(1, edge.source.length - 1).split(", ");
+        target = edge.target.substring(1, edge.target.length - 1).split(", ");
+        type = edge.type;
+
+        if (source[0] == "1") {
+            var x1 = 135;
+            var x2 = 265;
+        } else {
+            var x1 = 265;
+            var x2 = 135;
+        }
+        var offset = 5;
+        if (type == "V"){
+            svg.append("line")
+                .attr("x1", x1)
+                .attr("x2", x2)
+                .attr("y1", (Number(source[1]) * 100) + offset)
+                .attr("y2", (Number(target[1]) * 100) + offset)
+                .attr("stroke", "purple")
+                .attr("stroke-width", 3)
+                .attr("marker-end", "url(#arrowV)");
+        } else if (type == "F") {
+            svg.append("line")
+                .attr("x1", x1)
+                .attr("x2", x2)
+                .attr("y1", (Number(source[1]) * 100) - offset)
+                .attr("y2", (Number(target[1]) * 100) - offset)
+                .attr("stroke", "orange")
+                .attr("stroke-width", 3)
+                .attr("marker-end", "url(#arrowF)");
+        } 
+    }
+
+    // Next, draw the nodes
+    for (var i = 1; i <= strata.q; i++){
+        var x1 = 100;
+        var x2 = 300;
+        
+        svg.append("circle")
+            .attr("cx", x1)
+            .attr("cy", i*100)
+            .attr("r", 30)
+            .style("fill", "white")
+            .attr("stroke", "black")
+            .attr("stroke-width", 3);
+
+        svg.append("text")
+            .attr("x", x1)
+            .attr("y", i*100)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "18px")
+            .style("dominant-baseline", "middle")
+            .style("fill", "black")
+            .text(`(1, ${i})`);
+
+        svg.append("circle")
+            .attr("cx", x2)
+            .attr("cy", i*100)
+            .attr("r", 30)
+            .style("fill", "white")
+            .attr("stroke", "black")
+            .attr("stroke-width", 3);
+
+        svg.append("text")
+            .attr("x", x2)
+            .attr("y", i*100)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "18px")
+            .style("dominant-baseline", "middle")
+            .style("fill", "black")
+            .text(`(2, ${i})`);
+    }
 
 }
