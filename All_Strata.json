@@ -2346,7 +2346,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^1, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -2956,7 +2956,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^1, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -3746,7 +3746,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^1, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -4544,7 +4544,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^1, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -5311,7 +5311,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^2, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -6208,7 +6208,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^2, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -7609,7 +7609,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^2, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -8108,7 +8108,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^2, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -9728,7 +9728,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^2, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -10955,7 +10955,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^2, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -11824,7 +11824,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^1, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -11936,7 +11936,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -13057,7 +13057,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^1, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -13170,7 +13170,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -13840,7 +13840,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -14171,7 +14171,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^1, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -15301,7 +15301,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^1, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -15415,7 +15415,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -15751,7 +15751,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^1, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -15863,7 +15863,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -16425,7 +16425,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -16763,7 +16763,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^1, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -17663,7 +17663,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^1, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -19705,7 +19705,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^1, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -19820,7 +19820,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -20046,7 +20046,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^1, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -20272,7 +20272,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -20496,7 +20496,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^1, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -20837,7 +20837,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -21067,7 +21067,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^1, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -23244,7 +23244,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^1, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -23470,7 +23470,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -23700,7 +23700,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -24040,7 +24040,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^1, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -25317,7 +25317,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^1, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -25434,7 +25434,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^3, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -26530,7 +26530,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -26655,7 +26655,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -28150,7 +28150,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -28276,7 +28276,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -29268,7 +29268,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -30008,7 +30008,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^2, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -31514,7 +31514,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -31641,7 +31641,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -32139,7 +32139,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -32633,7 +32633,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -33258,7 +33258,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -33385,7 +33385,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -33885,7 +33885,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -34137,7 +34137,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -35385,7 +35385,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -35758,7 +35758,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^2, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -39528,7 +39528,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -39656,7 +39656,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -40034,7 +40034,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -40160,7 +40160,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -40660,7 +40660,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -41160,7 +41160,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^2, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -42038,7 +42038,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -42418,7 +42418,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -44684,7 +44684,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^2, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -47737,7 +47737,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -48364,7 +48364,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -48491,7 +48491,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -48870,7 +48870,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -48999,7 +48999,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -49253,7 +49253,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -50007,7 +50007,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -50259,7 +50259,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^2, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -50767,7 +50767,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -51025,7 +51025,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -54734,7 +54734,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -54988,7 +54988,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -55374,7 +55374,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -55882,7 +55882,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^2, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -57568,7 +57568,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^2, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -57699,7 +57699,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^4, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -58910,7 +58910,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -59046,7 +59046,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -59184,7 +59184,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -60966,7 +60966,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -61103,7 +61103,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -61242,7 +61242,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -62469,7 +62469,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -62606,7 +62606,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -63146,7 +63146,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -63551,7 +63551,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -63686,7 +63686,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -63960,7 +63960,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -65754,7 +65754,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -65892,7 +65892,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -66032,7 +66032,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -66718,7 +66718,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -66988,7 +66988,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -67260,7 +67260,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -67530,7 +67530,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -67802,7 +67802,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -68628,7 +68628,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -68768,7 +68768,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -69316,7 +69316,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -69454,7 +69454,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -69868,7 +69868,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -70004,7 +70004,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -70278,7 +70278,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -71924,7 +71924,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -72336,7 +72336,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -72472,7 +72472,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -72748,7 +72748,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -73438,7 +73438,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -73712,7 +73712,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -74666,7 +74666,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -75348,7 +75348,7 @@
       ],
       "TL_Slope":"1\/8^1, 1\/2^1, 7\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -79080,7 +79080,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -79219,7 +79219,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -79360,7 +79360,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -79914,7 +79914,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -80051,7 +80051,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -80325,7 +80325,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -80464,7 +80464,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -81014,7 +81014,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -81153,7 +81153,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -81562,7 +81562,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -81836,7 +81836,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -81973,7 +81973,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -82112,7 +82112,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -82521,7 +82521,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -82932,7 +82932,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -83204,7 +83204,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -83895,7 +83895,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -84036,7 +84036,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -84453,7 +84453,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -84592,7 +84592,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -84872,7 +84872,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -85009,7 +85009,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -86250,7 +86250,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -86659,7 +86659,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -87902,7 +87902,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -89012,7 +89012,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -89427,7 +89427,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -89848,7 +89848,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -90257,7 +90257,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -91363,7 +91363,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -92056,7 +92056,7 @@
       ],
       "TL_Slope":"1\/8^1, 1\/2^1, 7\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -95684,7 +95684,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -95824,7 +95824,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -96238,7 +96238,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -96376,7 +96376,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -96924,7 +96924,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -97064,7 +97064,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -97338,7 +97338,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -97478,7 +97478,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -97890,7 +97890,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -98446,7 +98446,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -98588,7 +98588,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -99008,7 +99008,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -99148,7 +99148,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -99840,7 +99840,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -99978,7 +99978,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -100800,7 +100800,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -101078,7 +101078,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -101356,7 +101356,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -101494,7 +101494,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -101634,7 +101634,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -102048,7 +102048,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -102460,7 +102460,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -102734,7 +102734,7 @@
       ],
       "TL_Slope":"1\/8^1, 1\/2^1, 7\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -103294,7 +103294,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -103716,7 +103716,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -104552,7 +104552,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -105244,7 +105244,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -106216,7 +106216,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -107194,7 +107194,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -108312,7 +108312,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -108736,7 +108736,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -113782,7 +113782,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -113923,7 +113923,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -114201,7 +114201,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -114479,7 +114479,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -114620,7 +114620,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -114761,7 +114761,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -115176,7 +115176,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -115317,7 +115317,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -115456,7 +115456,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -115875,7 +115875,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -116018,7 +116018,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -116300,7 +116300,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -116719,7 +116719,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -116997,7 +116997,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -117136,7 +117136,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -117412,7 +117412,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -117688,7 +117688,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -117829,7 +117829,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -118109,7 +118109,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -118524,7 +118524,7 @@
       ],
       "TL_Slope":"1\/8^1, 1\/2^1, 7\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -118810,7 +118810,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -119096,7 +119096,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -119521,7 +119521,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -124184,7 +124184,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -124462,7 +124462,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -124882,7 +124882,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -125164,7 +125164,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -125304,7 +125304,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -125446,7 +125446,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -125732,7 +125732,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -126292,7 +126292,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^1, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -126434,7 +126434,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^3, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -128438,7 +128438,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^1, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -128581,7 +128581,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^3, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -128726,7 +128726,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^5, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -130201,7 +130201,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -130350,7 +130350,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -130501,7 +130501,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -132744,7 +132744,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -132894,7 +132894,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -133046,7 +133046,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -134682,7 +134682,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -134832,7 +134832,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -135570,7 +135570,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -136602,7 +136602,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -136750,7 +136750,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -137050,7 +137050,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -139307,7 +139307,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 8)",
@@ -139458,7 +139458,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 8)",
@@ -139611,7 +139611,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 8)",
@@ -140509,7 +140509,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 8)",
@@ -140952,7 +140952,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 8)",
@@ -141250,7 +141250,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 8)",
@@ -142134,7 +142134,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 8)",
@@ -142432,7 +142432,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 8)",
@@ -143334,7 +143334,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -143485,7 +143485,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -143638,7 +143638,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -144385,7 +144385,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -144536,7 +144536,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -144987,7 +144987,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -145138,7 +145138,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -145287,7 +145287,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -145734,7 +145734,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -146179,7 +146179,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -148126,7 +148126,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -148277,7 +148277,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -148873,7 +148873,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -149320,7 +149320,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -149469,7 +149469,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -149771,7 +149771,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -150673,7 +150673,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -151563,7 +151563,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -152461,7 +152461,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -153200,7 +153200,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -154841,7 +154841,7 @@
       ],
       "TL_Slope":"1\/8^1, 1\/2^2, 7\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -160112,7 +160112,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -160264,7 +160264,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -160418,7 +160418,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -161174,7 +161174,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -161472,7 +161472,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -161772,7 +161772,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -162070,7 +162070,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -162370,7 +162370,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -163120,7 +163120,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -163272,7 +163272,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -163868,7 +163868,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -164614,7 +164614,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -164764,7 +164764,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -164916,7 +164916,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -165514,7 +165514,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -166408,7 +166408,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -166558,7 +166558,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -167598,7 +167598,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 7)",
@@ -168504,7 +168504,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -168658,7 +168658,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -169262,7 +169262,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -169414,7 +169414,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -169870,7 +169870,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -170020,7 +170020,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -170322,7 +170322,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -172122,7 +172122,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -173018,7 +173018,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -175866,7 +175866,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -177380,7 +177380,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -177834,7 +177834,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -177984,7 +177984,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -178288,7 +178288,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -178896,7 +178896,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -179792,7 +179792,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -180396,7 +180396,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -182052,7 +182052,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -182354,7 +182354,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -183406,7 +183406,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -184158,7 +184158,7 @@
       ],
       "TL_Slope":"1\/8^1, 1\/2^2, 7\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -190673,7 +190673,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -190826,7 +190826,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -191428,7 +191428,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -192026,7 +192026,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -192775,7 +192775,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -192928,7 +192928,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -193079,7 +193079,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -193379,7 +193379,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -193679,7 +193679,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -193832,7 +193832,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -194732,7 +194732,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -194883,7 +194883,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -195787,7 +195787,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -195940,7 +195940,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -196095,7 +196095,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -196705,7 +196705,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -196856,7 +196856,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -197158,7 +197158,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -197311,7 +197311,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -198217,7 +198217,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -198815,7 +198815,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -199564,7 +199564,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -200611,7 +200611,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -200913,7 +200913,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -201066,7 +201066,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -201517,7 +201517,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -201819,7 +201819,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -201970,7 +201970,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -202123,7 +202123,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -202574,7 +202574,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -203027,7 +203027,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -203327,7 +203327,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -203778,7 +203778,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -204376,7 +204376,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -205125,7 +205125,7 @@
       ],
       "TL_Slope":"1\/8^1, 1\/2^2, 7\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 6)",
@@ -206331,7 +206331,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -206486,7 +206486,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -206945,7 +206945,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -207098,7 +207098,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -207406,7 +207406,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -207557,7 +207557,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -208618,7 +208618,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -208922,7 +208922,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -209975,7 +209975,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -210279,7 +210279,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -211942,7 +211942,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -212393,7 +212393,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -213762,7 +213762,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -214819,7 +214819,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -217249,7 +217249,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -217706,7 +217706,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -218169,7 +218169,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -218620,7 +218620,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -222107,7 +222107,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -222870,7 +222870,7 @@
       ],
       "TL_Slope":"1\/8^1, 1\/2^2, 7\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -230800,7 +230800,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -230954,7 +230954,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -231410,7 +231410,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -231562,7 +231562,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -232166,7 +232166,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -232320,7 +232320,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -232622,7 +232622,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -232776,7 +232776,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -233230,7 +233230,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -233834,7 +233834,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -234290,7 +234290,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -234894,7 +234894,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -235046,7 +235046,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -236106,7 +236106,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -236262,7 +236262,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -236724,7 +236724,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -236878,7 +236878,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -237640,7 +237640,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -237792,7 +237792,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -238698,7 +238698,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -239000,7 +239000,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -239604,7 +239604,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -240658,7 +240658,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -240810,7 +240810,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -241266,7 +241266,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -241572,7 +241572,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -241724,7 +241724,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -241878,7 +241878,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -242334,7 +242334,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -243538,7 +243538,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -243840,7 +243840,7 @@
       ],
       "TL_Slope":"1\/8^1, 1\/2^2, 7\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 5)",
@@ -244606,7 +244606,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -245070,7 +245070,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -245990,7 +245990,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -246752,7 +246752,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -250098,7 +250098,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -251932,7 +251932,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -253314,7 +253314,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -253780,7 +253780,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -260553,7 +260553,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -261310,7 +261310,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -261463,7 +261463,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -262371,7 +262371,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -262677,7 +262677,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -262832,7 +262832,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -263138,7 +263138,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -263444,7 +263444,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -263599,7 +263599,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -263754,7 +263754,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -264211,7 +264211,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -264364,7 +264364,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -264970,7 +264970,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -265125,7 +265125,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -265278,7 +265278,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -265890,7 +265890,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -266047,7 +266047,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -266357,7 +266357,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -266818,7 +266818,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -267124,7 +267124,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -268032,7 +268032,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -268336,7 +268336,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -268640,7 +268640,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -268948,7 +268948,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -269256,7 +269256,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -269864,7 +269864,7 @@
       ],
       "TL_Slope":"1\/8^1, 1\/2^2, 7\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 4)",
@@ -270178,7 +270178,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -270492,7 +270492,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -270959,7 +270959,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(1, 1)",
@@ -278070,7 +278070,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -278376,7 +278376,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -278990,7 +278990,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -279300,7 +279300,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -279454,7 +279454,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -279764,7 +279764,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -280078,7 +280078,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -280846,7 +280846,7 @@
       ],
       "TL_Slope":"1\/4^2, 1\/2^2, 3\/4^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -281002,7 +281002,7 @@
       ],
       "TL_Slope":"1\/6^1, 1\/2^4, 5\/6^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 3)",
@@ -283509,7 +283509,7 @@
       ],
       "TL_Slope":"3\/8^1, 1\/2^2, 5\/8^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -283666,7 +283666,7 @@
       ],
       "TL_Slope":"1\/3^2, 1\/2^4, 2\/3^2",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",
@@ -283825,7 +283825,7 @@
       ],
       "TL_Slope":"1\/4^1, 1\/2^6, 3\/4^1",
       "Indecomposible":false,
-      "SS_Locus_Interaction":"Intersects",
+      "SS_Locus_Interaction":"Unknown",
       "Graph":[
          {
             "source":"(2, 2)",

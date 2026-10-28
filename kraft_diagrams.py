@@ -591,7 +591,7 @@ def SSLocus_Interaction(TL_Slopes, HS_Slope):
         return "Contained In"
     if TL_Slopes[0][0] == "0":
         return "Disjoint"
-    if "1/2" in ", ".join(TL_Slopes):
+    if len(TL_Slopes) == 1:
         return "Intersects"
     return "Unknown"
 
