@@ -75,8 +75,9 @@ async function filter_data() {
     });
 
     for (s of filtered_strata) {
+        var strata_id = "strata-".concat(s.q.toString().concat('__', s.Strata.toString().split(',').join('_')));
         let new_row = `
-                    <tr id="${s.q.toString().concat('__', s.Strata.toString().split(',').join('_'))}" onClick="draw_kraft_diagram(this.id)">
+                    <tr>
                         <td>${s.q.toString()}</td>
                         <td>(${s.Signature.toString().split(',').join(', ')})</td>
                         <td>${s.Strata.toString().split(',').join(', ')}</td>
@@ -84,10 +85,12 @@ async function filter_data() {
                         <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
                         <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
                         <td>[${s.TL_Slope.toString()}]</td>
-                        <td>${s.Indecomposible}</td>
+                        <td>${String(s.Indecomposible).charAt(0).toUpperCase() + String(s.Indecomposible).slice(1)}</td>
                         <td>${s.SS_Locus_Interaction}</td>
+                        <td><div id="${strata_id}"></div></td>
                     </tr>`;
         table_body.insertAdjacentHTML("beforeend", new_row);
+        draw_kraft_diagram(strata_id);
     }
 }
 
@@ -95,7 +98,7 @@ async function draw_kraft_diagram(strata_id) {
 
     // Get the data we'll be filtering
     var strata = await getData();
-    const strata_q = strata_id.split('__')[0];
+    const strata_q = strata_id.split('-')[1].split('__')[0];
     const strata_indices = strata_id.split('__')[1].split('_').join(',');
 
     // Find the particular strata clicked on in the JSON file 
@@ -109,11 +112,15 @@ async function draw_kraft_diagram(strata_id) {
 
     strata = strata[0];
 
+    console.log(strata);
     // Add place for an SVG in the webpage
-    var plot_div = document.getElementById("plot_graph");
-    plot_div.innerHTML = `<svg width="400" height="${strata.q * 120}"></svg>`
+    //var plot_div = document.getElementById("plot_graph");
+    //plot_div.innerHTML = `<svg width="400" height="${strata.q * 120}"></svg>`
 
-    svg = d3.select("svg");
+    let which_row = d3.select(`#${strata_id}`);
+    let svg = which_row.append("svg")
+        .attr("width", 400)
+        .attr("height", strata.q*120);
 
     svg.append("defs")
             .append("marker")
@@ -156,7 +163,6 @@ async function draw_kraft_diagram(strata_id) {
             .text(`q = ${strata.q}, Strata = [${strata.Strata.toString().split(",").join(", ")}]`);
 
     // Draw the edges first
-    console.log(strata.Graph);
     for (edge of strata.Graph){
         source = edge.source.substring(1, edge.source.length - 1).split(", ");
         target = edge.target.substring(1, edge.target.length - 1).split(", ");
