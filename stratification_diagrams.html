@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        caption {
+            caption-side: bottom;
+            padding: 10px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+    <head>
+        <h1>Stratification Diagrams for (q-2, 2)</h1>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <!-- IMPORT JAVASCRIPT-->
+        <script src="stratification_functions.js"></script>
+
+        <a href="index.html">Back to the Kraft Diagram Database</a>
+
+        <p>
+        Choose a q to display:
+        <select name="q" id="q" onchange="draw_stratification_diagram()">
+            <option value="" disabled selected>Select your option</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        </p>
+
+        <div id="draw_diagram">
+        </div>
+        
+
+    </body>
+</html>

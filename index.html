@@ -35,6 +35,11 @@
             caption-side: bottom;
             padding: 10px;
         }
+
+        h1 {
+            width: 50%;
+            margin: 0 auto;
+        }
     </style>
     <head>
         <h1>Kraft Diagram Database</h1>
@@ -43,6 +48,8 @@
     <body>
         <!-- IMPORT JAVASCRIPT-->
         <script src="database_functions.js"></script>
+
+        <a href="stratification_diagrams.html">Check out the Stratification Diagram Page!</a>
 
         <!-- FILTER THE DATA -->
         <!-- Filter by Dimension -->
@@ -101,6 +108,11 @@
             </select>
         </p>
 
+        <p>
+        Display Kraft Diagrams:
+        <input type="checkbox" id="display_diagrams" onchange="filter_data()">
+        </p>
+
         <p><input type="reset" onclick="filter_data()"/></p>
         </form>
 
@@ -117,7 +129,7 @@
                 <th>TL Slope</th>
                 <th>Indecomposible</th>
                 <th>SS Locus</th>
-                <th>Kraft Diagram</th>
+                <th>Kraft Diagram (On Toggle)</th>
             </tr>
             </thead>
             <tbody id="strata-body">

@@ -65,6 +65,8 @@ async function filter_data() {
         return true;
     });
 
+    var draw_diagrams = document.getElementById("display_diagrams").checked;
+
     // Filter based on the strata's interaction with the SS Locus
     filtered_strata = filtered_strata.filter(function (element) {
         var interaction = document.getElementById("SS Locus").value;
@@ -90,7 +92,9 @@ async function filter_data() {
                         <td><div id="${strata_id}"></div></td>
                     </tr>`;
         table_body.insertAdjacentHTML("beforeend", new_row);
-        draw_kraft_diagram(strata_id);
+        if (draw_diagrams){
+            draw_kraft_diagram(strata_id);
+        }
     }
 }
 
@@ -112,7 +116,6 @@ async function draw_kraft_diagram(strata_id) {
 
     strata = strata[0];
 
-    console.log(strata);
     // Add place for an SVG in the webpage
     //var plot_div = document.getElementById("plot_graph");
     //plot_div.innerHTML = `<svg width="400" height="${strata.q * 120}"></svg>`
