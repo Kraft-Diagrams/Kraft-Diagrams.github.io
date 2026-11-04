@@ -34,14 +34,14 @@ async function draw_stratification_diagram() {
         .attr("width", Math.max(400, sep_val * (Math.ceil((q + 1) / 2) + 2)) + 500)
         .attr("height", sep_val * (2 * q - 1));
 
-    
+
     // Make the legend
     var legend_start_x = Math.max(400, sep_val * (Math.ceil((q + 1) / 2) + 2)) + 50;
     var legend_start_y = 100;
     var legend_sep = 50;
     svg.append("text")
-        .attr("x", legend_start_x-20)
-        .attr("y", legend_start_y+10)
+        .attr("x", legend_start_x - 20)
+        .attr("y", legend_start_y + 10)
         .attr("text-anchor", "center")
         .attr("font-size", "24px")
         .style("fill", "black")
@@ -50,14 +50,14 @@ async function draw_stratification_diagram() {
     // Unknown
     svg.append("circle")
         .attr("cx", legend_start_x)
-        .attr("cy", legend_start_y+legend_sep)
+        .attr("cy", legend_start_y + legend_sep)
         .attr("r", 20)
         .style("fill", "white")
         .attr("stroke", "black")
         .attr("stroke-width", 3);
     svg.append("text")
-        .attr("x", legend_start_x+30)
-        .attr("y", legend_start_y+legend_sep+5)
+        .attr("x", legend_start_x + 30)
+        .attr("y", legend_start_y + legend_sep + 5)
         .attr("text-anchor", "right")
         .attr("font-size", "16px")
         .style("fill", "black")
@@ -66,14 +66,14 @@ async function draw_stratification_diagram() {
     // Contained In
     svg.append("circle")
         .attr("cx", legend_start_x)
-        .attr("cy", legend_start_y+2*legend_sep)
+        .attr("cy", legend_start_y + 2 * legend_sep)
         .attr("r", 20)
         .style("fill", "#BFD6A1")
         .attr("stroke", "black")
         .attr("stroke-width", 3);
     svg.append("text")
-        .attr("x", legend_start_x+30)
-        .attr("y", legend_start_y+2*legend_sep+5)
+        .attr("x", legend_start_x + 30)
+        .attr("y", legend_start_y + 2 * legend_sep + 5)
         .attr("text-anchor", "right")
         .attr("font-size", "16px")
         .style("fill", "black")
@@ -81,14 +81,14 @@ async function draw_stratification_diagram() {
     // Intersects
     svg.append("circle")
         .attr("cx", legend_start_x)
-        .attr("cy", legend_start_y+3*legend_sep)
+        .attr("cy", legend_start_y + 3 * legend_sep)
         .attr("r", 20)
         .style("fill", "#9ACFF1")
         .attr("stroke", "black")
         .attr("stroke-width", 3);
     svg.append("text")
-        .attr("x", legend_start_x+30)
-        .attr("y", legend_start_y+3*legend_sep+5)
+        .attr("x", legend_start_x + 30)
+        .attr("y", legend_start_y + 3 * legend_sep + 5)
         .attr("text-anchor", "right")
         .attr("font-size", "16px")
         .style("fill", "black")
@@ -96,14 +96,14 @@ async function draw_stratification_diagram() {
     // Disjoint
     svg.append("circle")
         .attr("cx", legend_start_x)
-        .attr("cy", legend_start_y+4*legend_sep)
+        .attr("cy", legend_start_y + 4 * legend_sep)
         .attr("r", 20)
         .style("fill", "#D2D1E2")
         .attr("stroke", "black")
         .attr("stroke-width", 3);
     svg.append("text")
-        .attr("x", legend_start_x+30)
-        .attr("y", legend_start_y+4*legend_sep+5)
+        .attr("x", legend_start_x + 30)
+        .attr("y", legend_start_y + 4 * legend_sep + 5)
         .attr("text-anchor", "right")
         .attr("font-size", "16px")
         .style("fill", "black")
@@ -156,7 +156,7 @@ async function draw_stratification_diagram() {
                 .style("dominant-baseline", "middle")
                 .style("fill", "black")
                 .text(`(${x}, ${y})`)
-                .on("click", function(){
+                .on("click", function () {
                     // BRUHAT ORDER ---------------------------------------------
                     var bruhat = document.getElementById("Bruhat");
 
@@ -181,18 +181,18 @@ async function draw_stratification_diagram() {
                             <td><ul id="bruhat-unrelated"></ul></td>
                         </tbody>
                         </table>`;
-                    
+
                     var above_list = document.getElementById("bruhat-above");
                     var below_list = document.getElementById("bruhat-below");
                     var unrelated_list = document.getElementById("bruhat-unrelated");
 
-                    for (var i = 1; i < q; i++){
-                        for (var j = i+1; j <= q; j++){
-                            if (i != a || j != b){
+                    for (var i = 1; i < q; i++) {
+                        for (var j = i + 1; j <= q; j++) {
+                            if (i != a || j != b) {
                                 if (i >= a && j >= b) {
-                                above_list.innerHTML += `<li>(${i}, ${j})</li>`;
+                                    above_list.innerHTML += `<li>(${i}, ${j})</li>`;
                                 } else if (i <= a && j <= b) {
-                                below_list.innerHTML += `<li>(${i}, ${j})</li>`;
+                                    below_list.innerHTML += `<li>(${i}, ${j})</li>`;
                                 } else {
                                     unrelated_list.innerHTML += `<li>(${i}, ${j})</li>`;
                                 }
@@ -220,17 +220,17 @@ async function draw_stratification_diagram() {
                             <td><ul id="he-unrelated"></ul></td>
                         </tbody>
                         </table>`;
-                    
+
                     var above_list_he = document.getElementById("he-above");
                     var below_list_he = document.getElementById("he-below");
                     var unrelated_list_he = document.getElementById("he-unrelated");
 
-                    for (var i = 1; i < q; i++){
-                        for (var j = i+1; j <= q; j++){
-                            if (i != a || j != b){
-                                if ((a-i)*2 == (j-b)) {
+                    for (var i = 1; i < q; i++) {
+                        for (var j = i + 1; j <= q; j++) {
+                            if (i != a || j != b) {
+                                if ((a - i) * 2 == (j - b)) {
                                     above_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
-                                } else if ((j-b)*2 == (a-i)) {
+                                } else if ((j - b) * 2 == (a - i)) {
                                     below_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
                                 } else {
                                     unrelated_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
@@ -238,7 +238,7 @@ async function draw_stratification_diagram() {
                             }
                         }
                     }
-                    
+
                 });
         }
     } // End "Above the Equator"
@@ -276,7 +276,7 @@ async function draw_stratification_diagram() {
                 .attr("font-size", "20px")
                 .style("dominant-baseline", "middle")
                 .style("fill", "black")
-                .text(`(${x}, ${y})`).on("click", function(){
+                .text(`(${x}, ${y})`).on("click", function () {
 
                     // Determine which strata we clicked on
                     var strata = d3.select(this).text().slice(1, -1).split(", ");
@@ -303,18 +303,18 @@ async function draw_stratification_diagram() {
                             <td><ul id="bruhat-unrelated"></ul></td>
                         </tbody>
                         </table>`;
-                    
+
                     var above_list = document.getElementById("bruhat-above");
                     var below_list = document.getElementById("bruhat-below");
                     var unrelated_list = document.getElementById("bruhat-unrelated");
 
-                    for (var i = 1; i < q; i++){
-                        for (var j = i+1; j <= q; j++){
-                            if (i != a || j != b){
+                    for (var i = 1; i < q; i++) {
+                        for (var j = i + 1; j <= q; j++) {
+                            if (i != a || j != b) {
                                 if (i >= a && j >= b) {
-                                above_list.innerHTML += `<li>(${i}, ${j})</li>`;
+                                    above_list.innerHTML += `<li>(${i}, ${j})</li>`;
                                 } else if (i <= a && j <= b) {
-                                below_list.innerHTML += `<li>(${i}, ${j})</li>`;
+                                    below_list.innerHTML += `<li>(${i}, ${j})</li>`;
                                 } else {
                                     unrelated_list.innerHTML += `<li>(${i}, ${j})</li>`;
                                 }
@@ -342,17 +342,17 @@ async function draw_stratification_diagram() {
                             <td><ul id="he-unrelated"></ul></td>
                         </tbody>
                         </table>`;
-                    
+
                     var above_list_he = document.getElementById("he-above");
                     var below_list_he = document.getElementById("he-below");
                     var unrelated_list_he = document.getElementById("he-unrelated");
 
-                    for (var i = 1; i < q; i++){
-                        for (var j = i+1; j <= q; j++){
-                            if (i != a || j != b){
-                                if ((a-i)*2 == (j-b)) {
+                    for (var i = 1; i < q; i++) {
+                        for (var j = i + 1; j <= q; j++) {
+                            if (i != a || j != b) {
+                                if ((a - i) * 2 == (j - b)) {
                                     above_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
-                                } else if ((j-b)*2 == (a-i)) {
+                                } else if ((j - b) * 2 == (a - i)) {
                                     below_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
                                 } else {
                                     unrelated_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
@@ -364,3 +364,4 @@ async function draw_stratification_diagram() {
         }
     }
 }
+
