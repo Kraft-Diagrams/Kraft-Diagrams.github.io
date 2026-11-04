@@ -28,12 +28,11 @@ async function draw_stratification_diagram() {
         return false;
     });
 
-    var sep_val = 75;
+    var sep_val = 100;
     let which_diagram = d3.select(`#draw_diagram`);
     let svg = which_diagram.append("svg")
         .attr("width", Math.max(400, sep_val * (Math.ceil((q + 1) / 2) + 2)) + 500)
         .attr("height", sep_val * (2 * q - 1));
-
 
     // Make the legend
     var legend_start_x = Math.max(400, sep_val * (Math.ceil((q + 1) / 2) + 2)) + 50;
@@ -155,8 +154,50 @@ async function draw_stratification_diagram() {
                 .attr("font-size", "20px")
                 .style("dominant-baseline", "middle")
                 .style("fill", "black")
-                .text(`(${x}, ${y})`)
-                .on("click", function () {
+                .text(`(${x}, ${y})`);
+        }
+    } // End "Above the Equator"
+    // Below the Equator
+    for (var x = 1; x <= Math.floor(q / 2); x++) {
+        let cx = sep_val * x;
+        for (var y = q + 1 - x; y >= 2 + x - 1; y--) {
+            cy = sep_val * (q - 2) + sep_val * (q - y - x + 2 + 1);
+            let which_strata = filtered_strata.filter(function (element) {
+                if (element.Strata[0] == x && element.Strata[1] == y) {
+                    return true;
+                }
+                return false;
+            });
+
+            let color = "white";
+            if (which_strata[0].SS_Locus_Interaction == "Contained In") {
+                color = "#BFD6A1";
+            } else if (which_strata[0].SS_Locus_Interaction == "Intersects") {
+                color = "#9ACFF1";
+            } else if (which_strata[0].SS_Locus_Interaction == "Disjoint") {
+                color = "#D2D1E2"
+            }
+            svg.append("circle")
+                .attr("cx", cx)
+                .attr("cy", cy)
+                .attr("r", 30)
+                .style("fill", color)
+                .attr("stroke", "black")
+                .attr("stroke-width", 3);
+            svg.append("text")
+                .attr("x", cx)
+                .attr("y", cy)
+                .attr("text-anchor", "middle")
+                .attr("font-size", "20px")
+                .style("dominant-baseline", "middle")
+                .style("fill", "black")
+                .text(`(${x}, ${y})`);
+        }
+    }
+}
+
+/*
+.on("click", function () {
                     // BRUHAT ORDER ---------------------------------------------
                     var bruhat = document.getElementById("Bruhat");
 
@@ -240,128 +281,5 @@ async function draw_stratification_diagram() {
                     }
 
                 });
-        }
-    } // End "Above the Equator"
-    // Below the Equator
-    for (var x = 1; x <= Math.floor(q / 2); x++) {
-        let cx = sep_val * x;
-        for (var y = q + 1 - x; y >= 2 + x - 1; y--) {
-            cy = sep_val * (q - 2) + sep_val * (q - y - x + 2 + 1);
-            let which_strata = filtered_strata.filter(function (element) {
-                if (element.Strata[0] == x && element.Strata[1] == y) {
-                    return true;
-                }
-                return false;
-            });
-
-            let color = "white";
-            if (which_strata[0].SS_Locus_Interaction == "Contained In") {
-                color = "#BFD6A1";
-            } else if (which_strata[0].SS_Locus_Interaction == "Intersects") {
-                color = "#9ACFF1";
-            } else if (which_strata[0].SS_Locus_Interaction == "Disjoint") {
-                color = "#D2D1E2"
-            }
-            svg.append("circle")
-                .attr("cx", cx)
-                .attr("cy", cy)
-                .attr("r", 30)
-                .style("fill", color)
-                .attr("stroke", "black")
-                .attr("stroke-width", 3);
-            svg.append("text")
-                .attr("x", cx)
-                .attr("y", cy)
-                .attr("text-anchor", "middle")
-                .attr("font-size", "20px")
-                .style("dominant-baseline", "middle")
-                .style("fill", "black")
-                .text(`(${x}, ${y})`).on("click", function () {
-
-                    // Determine which strata we clicked on
-                    var strata = d3.select(this).text().slice(1, -1).split(", ");
-                    var a = Number(strata[0]);
-                    var b = Number(strata[1]);
-
-                    // BRUHAT ORDER ---------------------------------------------
-                    var bruhat = document.getElementById("Bruhat");
-
-                    bruhat.innerHTML = `<table id='bruhat-order'>
-                        <thead>
-                        <tr>
-                            <th colspan="3">Bruhat Order for Strata (${a}, ${b})</th>
-                        </tr>
-                        <tr>
-                            <th>Above</th>
-                            <th>Below</th>
-                            <th>Unrelated</th>
-                        </tr>
-                        </thead>
-                        <tbody id="bruhat-body">
-                            <td><ul id="bruhat-above"></ul></td>
-                            <td><ul id="bruhat-below"></ul></td>
-                            <td><ul id="bruhat-unrelated"></ul></td>
-                        </tbody>
-                        </table>`;
-
-                    var above_list = document.getElementById("bruhat-above");
-                    var below_list = document.getElementById("bruhat-below");
-                    var unrelated_list = document.getElementById("bruhat-unrelated");
-
-                    for (var i = 1; i < q; i++) {
-                        for (var j = i + 1; j <= q; j++) {
-                            if (i != a || j != b) {
-                                if (i >= a && j >= b) {
-                                    above_list.innerHTML += `<li>(${i}, ${j})</li>`;
-                                } else if (i <= a && j <= b) {
-                                    below_list.innerHTML += `<li>(${i}, ${j})</li>`;
-                                } else {
-                                    unrelated_list.innerHTML += `<li>(${i}, ${j})</li>`;
-                                }
-                            }
-                        }
-                    }
-
-                    // HE ORDER ---------------------------------------------
-                    var he = document.getElementById("He");
-
-                    he.innerHTML = `<table id='he-order'>
-                        <thead>
-                        <tr>
-                            <th colspan="3">He Order for Strata (${a}, ${b})</th>
-                        </tr>
-                        <tr>
-                            <th>Above</th>
-                            <th>Below</th>
-                            <th>Unrelated</th>
-                        </tr>
-                        </thead>
-                        <tbody id="he-body">
-                            <td><ul id="he-above"></ul></td>
-                            <td><ul id="he-below"></ul></td>
-                            <td><ul id="he-unrelated"></ul></td>
-                        </tbody>
-                        </table>`;
-
-                    var above_list_he = document.getElementById("he-above");
-                    var below_list_he = document.getElementById("he-below");
-                    var unrelated_list_he = document.getElementById("he-unrelated");
-
-                    for (var i = 1; i < q; i++) {
-                        for (var j = i + 1; j <= q; j++) {
-                            if (i != a || j != b) {
-                                if ((a - i) * 2 == (j - b)) {
-                                    above_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
-                                } else if ((j - b) * 2 == (a - i)) {
-                                    below_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
-                                } else {
-                                    unrelated_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
-                                }
-                            }
-                        }
-                    }
-                });
-        }
-    }
-}
+*/
 
