@@ -7,7 +7,7 @@
         }
 
         h1 {
-            font-size: 2.5vw;
+            font-size: 2vw;
             background: pink;
             display: flex;
             justify-content: center;
@@ -17,7 +17,53 @@
         }
 
         p, a, select {
-            font-size: 1vw;
+            font-size: 0.8vw;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 0.75vw;
+        }
+
+        .container > div {
+            flex: 1; /*grow*/
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        div {
+            vertical-align:top;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        td, th, tr {
+            width: 33%;
+            text-align: center;
+            font-size: 1.1vw;
+            vertical-align: top;
+            border: 1px solid rgb(160 160 160);
+            padding: 8px 10px;
+        }
+
+        table {
+            float: center;
+            vertical-align: top;
+            border-collapse: collapse;
+            border: 2px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
         }
     </style>
     <head>
@@ -46,9 +92,11 @@
         </select>
         </p>
 
-        <div id="draw_diagram">
+        <div class="container">
+            <div id="Bruhat" style="vertical-align: top;" ></div>
+            <div id="draw_diagram" style="vertical-align: top;"></div>  
+            <div id="He" style="vertical-align: top;"></div>
         </div>
-        
 
     </body>
 </html>
