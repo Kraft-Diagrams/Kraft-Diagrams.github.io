@@ -20,22 +20,22 @@ async function filter_data() {
 
     // Filter elements based on their dimension (q)
     filtered_strata = strata.filter(function (element) {
-        var q = document.getElementById("q").value;
+        var q = Number(document.getElementById("q").value);
         var comp_q = document.getElementById("q_filter").value;
 
         if (q == "all") {
             return true;
         }
         if (comp_q == "eq") {
-            if (element.q.toString() == q) {
+            if (Number(element.q) == q) {
                 return true;
             }
         } else if (comp_q == "le") {
-            if (element.q.toString() <= q) {
+            if (Number(element.q) <= q) {
                 return true;
             }
         } else if (comp_q == "ge") {
-            if (element.q.toString() >= q) {
+            if (Number(element.q) >= q) {
                 return true;
             }
         }
