@@ -24,7 +24,8 @@ async function draw_stratification_diagram() {
         return false;
     });
 
-    var sep_val = 100;
+    var radius = 40; // Radius for the circles in the stratification diagrams
+    var sep_val = 140; // Amount of pixels to seperate the circles in the stratification diagram
     let which_diagram = d3.select(`#draw_diagram`);
     let svg = which_diagram.append("svg")
         .attr("width", Math.max(400, sep_val * (Math.ceil((q + 1) / 2) + 2)) + 500)
@@ -201,7 +202,7 @@ async function draw_stratification_diagram() {
             svg.append("circle")
                 .attr("cx", cx)
                 .attr("cy", cy)
-                .attr("r", 30)
+                .attr("r", radius)
                 .style("fill", color)
                 .attr("stroke", "black")
                 .attr("stroke-width", 3);
@@ -219,10 +220,10 @@ async function draw_stratification_diagram() {
             // Diagonal arrows
             if (y + 1 <= q){
                 svg.append("line")
-                    .attr("x1", cx - sep_val + 30)
-                    .attr("x2", cx - 30)
-                    .attr("y1", cy - sep_val + 30)
-                    .attr("y2", cy - 30)
+                    .attr("x1", cx - sep_val + radius)
+                    .attr("x2", cx - radius)
+                    .attr("y1", cy - sep_val + radius)
+                    .attr("y2", cy - radius)
                     .attr("stroke", "gray")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowB)");
@@ -232,8 +233,8 @@ async function draw_stratification_diagram() {
                 svg.append("line")
                     .attr("x1", cx)
                     .attr("x2", cx)
-                    .attr("y1", cy - sep_val + 37)
-                    .attr("y2", cy - 40)
+                    .attr("y1", cy - sep_val + radius + 7)
+                    .attr("y2", cy - radius - 10)
                     .attr("stroke", "gray")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowB)");
@@ -241,10 +242,10 @@ async function draw_stratification_diagram() {
             // Closer Order Next
             if (y + 2 <= q){
                 svg.append("line")
-                    .attr("x1", cx - 2*sep_val + 30)
-                    .attr("x2", cx - 30)
-                    .attr("y1", cy - sep_val + 25)
-                    .attr("y2", cy - 25)
+                    .attr("x1", cx - 2*sep_val + radius)
+                    .attr("x2", cx - radius)
+                    .attr("y1", cy - sep_val + radius - 5)
+                    .attr("y2", cy - radius + 5)
                     .attr("stroke", "orange")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
@@ -275,7 +276,7 @@ async function draw_stratification_diagram() {
             svg.append("circle")
                 .attr("cx", cx)
                 .attr("cy", cy)
-                .attr("r", 30)
+                .attr("r", radius)
                 .style("fill", color)
                 .attr("stroke", "black")
                 .attr("stroke-width", 3);
@@ -292,10 +293,10 @@ async function draw_stratification_diagram() {
             // Diagonal arrows
             if (x + 1 < y){
                 svg.append("line")
-                    .attr("x1", cx + sep_val - 30)
-                    .attr("x2", cx + 30)
-                    .attr("y1", cy - sep_val + 30)
-                    .attr("y2", cy - 30)
+                    .attr("x1", cx + sep_val - radius)
+                    .attr("x2", cx + radius)
+                    .attr("y1", cy - sep_val + radius)
+                    .attr("y2", cy - radius)
                     .attr("stroke", "gray")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowB)");
@@ -305,8 +306,8 @@ async function draw_stratification_diagram() {
                 svg.append("line")
                     .attr("x1", cx)
                     .attr("x2", cx)
-                    .attr("y1", cy - sep_val + 37)
-                    .attr("y2", cy - 40)
+                    .attr("y1", cy - sep_val + radius + 7)
+                    .attr("y2", cy - radius - 10)
                     .attr("stroke", "gray")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowB)");
@@ -314,10 +315,10 @@ async function draw_stratification_diagram() {
             // Closer Order Next
             if (x + 2 < y - 1){
                 svg.append("line")
-                    .attr("x1", cx + 2*sep_val - 30)
-                    .attr("x2", cx + 30)
-                    .attr("y1", cy - sep_val + 25)
-                    .attr("y2", cy - 25)
+                    .attr("x1", cx + 2*sep_val - radius)
+                    .attr("x2", cx + radius)
+                    .attr("y1", cy - sep_val + radius - 5)
+                    .attr("y2", cy - radius + 5)
                     .attr("stroke", "orange")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
