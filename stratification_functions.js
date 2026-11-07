@@ -16,10 +16,6 @@ async function draw_stratification_diagram() {
     // Get the data we'll be filtering
     var strata = await getData();
 
-    // Remove any previous data
-    document.getElementById("Bruhat").innerHTML = "";
-    document.getElementById("He").innerHTML = "";
-
     // Filter elements based on signature (q-2, 2)
     var filtered_strata = strata.filter(function (element) {
         if (element.Signature[1].toString() == 2 && element.q.toString() == q.toString()) {
@@ -34,7 +30,34 @@ async function draw_stratification_diagram() {
         .attr("width", Math.max(400, sep_val * (Math.ceil((q + 1) / 2) + 2)) + 500)
         .attr("height", sep_val * (2 * q - 1));
 
-    // Make the legend
+    // DEFINE ARROWS ----------------------------------------------
+    svg.append("defs")
+            .append("marker")
+            .attr("id", "arrowB")
+            .attr("viewBox", "0 0 10 10")
+            .attr("refX", 5)
+            .attr("refY", 5)
+            .attr("markerWidth", 5)
+            .attr("markerHeight", 5)
+            .attr("orient", "auto-start-reverse")
+            .append("path")
+            .attr("d", "M0,0L10,5L0,10")
+            .attr("fill", "gray");
+
+    svg.append("defs")
+            .append("marker")
+            .attr("id", "arrowC")
+            .attr("viewBox", "0 0 10 10")
+            .attr("refX", 5)
+            .attr("refY", 5)
+            .attr("markerWidth", 5)
+            .attr("markerHeight", 5)
+            .attr("orient", "auto-start-reverse")
+            .append("path")
+            .attr("d", "M0,0L10,5L0,10")
+            .attr("fill", "orange");
+
+    // MAKE THE LEGEND ----------------------------------------------
     var legend_start_x = Math.max(400, sep_val * (Math.ceil((q + 1) / 2) + 2)) + 50;
     var legend_start_y = 100;
     var legend_sep = 50;
@@ -46,7 +69,7 @@ async function draw_stratification_diagram() {
         .style("fill", "black")
         .text("Legend");
 
-    // Unknown
+    // Unknown Interaction With the SS Locus
     svg.append("circle")
         .attr("cx", legend_start_x)
         .attr("cy", legend_start_y + legend_sep)
@@ -62,7 +85,7 @@ async function draw_stratification_diagram() {
         .style("fill", "black")
         .text(`Unknown Interaction With the SS Locus`);
 
-    // Contained In
+    // Contained In the SS Locus
     svg.append("circle")
         .attr("cx", legend_start_x)
         .attr("cy", legend_start_y + 2 * legend_sep)
@@ -77,7 +100,8 @@ async function draw_stratification_diagram() {
         .attr("font-size", "16px")
         .style("fill", "black")
         .text(`Contained in the SS Locus`);
-    // Intersects
+
+    // Intersects the SS Locus
     svg.append("circle")
         .attr("cx", legend_start_x)
         .attr("cy", legend_start_y + 3 * legend_sep)
@@ -92,7 +116,8 @@ async function draw_stratification_diagram() {
         .attr("font-size", "16px")
         .style("fill", "black")
         .text(`Intersects the SS Locus`);
-    // Disjoint
+
+    // Disjoint from the SS Locus
     svg.append("circle")
         .attr("cx", legend_start_x)
         .attr("cy", legend_start_y + 4 * legend_sep)
@@ -108,7 +133,40 @@ async function draw_stratification_diagram() {
         .style("fill", "black")
         .text(`Disjoint From the SS Locus`);
 
-    // Make the title
+    svg.append("line")
+        .attr("x1", legend_start_x - 20)
+        .attr("x2", legend_start_x + 20)
+        .attr("y1", legend_start_y + 5 * legend_sep)
+        .attr("y2", legend_start_y + 5 * legend_sep)
+        .attr("stroke", "orange")
+        .attr("stroke-width", 2)
+        .attr("marker-end", "url(#arrowC)");
+    svg.append("text")
+        .attr("x", legend_start_x + 30)
+        .attr("y", legend_start_y + 5 * legend_sep + 5)
+        .attr("text-anchor", "right")
+        .attr("font-size", "16px")
+        .style("fill", "black")
+        .text(`Closure (He) Order`);
+
+    svg.append("line")
+        .attr("x1", legend_start_x - 20)
+        .attr("x2", legend_start_x + 20)
+        .attr("y1", legend_start_y + 6 * legend_sep)
+        .attr("y2", legend_start_y + 6 * legend_sep)
+        .attr("stroke", "gray")
+        .attr("stroke-width", 2)
+        .attr("marker-end", "url(#arrowB)");
+    svg.append("text")
+        .attr("x", legend_start_x + 30)
+        .attr("y", legend_start_y + 6 * legend_sep + 5)
+        .attr("text-anchor", "right")
+        .attr("font-size", "16px")
+        .style("fill", "black")
+        .text(`Bruhat Order`);
+    // END LEGEND ----------------------------------------------
+
+    // MAKE THE TITLE ----------------------------------------------
     svg.append("text")
         .attr("x", 200)
         .attr("y", 50)
@@ -117,8 +175,9 @@ async function draw_stratification_diagram() {
         .style("dominant-baseline", "middle")
         .style("fill", "black")
         .text(`Stratification Diagram for Signature (${q - 2}, 2)`);
+    // END TITLE ----------------------------------------------
 
-    // ABOVE THE EQUATOR
+    // ABOVE THE EQUATOR ----------------------------------------------
     for (var y = q; y > Math.floor((q + 2) / 2); y--) {
         let cx = sep_val * (q - y + 2);
         for (var x = y - 1; x > q - y + 1; x--) {
@@ -155,9 +214,45 @@ async function draw_stratification_diagram() {
                 .style("dominant-baseline", "middle")
                 .style("fill", "black")
                 .text(`(${x}, ${y})`);
+
+            // Bruhat Order First
+            // Diagonal arrows
+            if (y + 1 <= q){
+                svg.append("line")
+                    .attr("x1", cx - sep_val + 30)
+                    .attr("x2", cx - 30)
+                    .attr("y1", cy - sep_val + 30)
+                    .attr("y2", cy - 30)
+                    .attr("stroke", "gray")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowB)");
+            }
+            // Vertical Lines
+            if (x + 1 < q && x + 1 != y) {
+                svg.append("line")
+                    .attr("x1", cx)
+                    .attr("x2", cx)
+                    .attr("y1", cy - sep_val + 37)
+                    .attr("y2", cy - 40)
+                    .attr("stroke", "gray")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowB)");
+            }
+            // Closer Order Next
+            if (y + 2 <= q){
+                svg.append("line")
+                    .attr("x1", cx - 2*sep_val + 30)
+                    .attr("x2", cx - 30)
+                    .attr("y1", cy - sep_val + 25)
+                    .attr("y2", cy - 25)
+                    .attr("stroke", "orange")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowC)");
+            }
         }
-    } // End "Above the Equator"
-    // Below the Equator
+    } // END ABOVE THE EQUATOR ----------------------------------------------
+
+    // BELOW THE EQUATOR ----------------------------------------------
     for (var x = 1; x <= Math.floor(q / 2); x++) {
         let cx = sep_val * x;
         for (var y = q + 1 - x; y >= 2 + x - 1; y--) {
@@ -192,8 +287,44 @@ async function draw_stratification_diagram() {
                 .style("dominant-baseline", "middle")
                 .style("fill", "black")
                 .text(`(${x}, ${y})`);
+
+            // Bruhat Order First
+            // Diagonal arrows
+            if (x + 1 < y){
+                svg.append("line")
+                    .attr("x1", cx + sep_val - 30)
+                    .attr("x2", cx + 30)
+                    .attr("y1", cy - sep_val + 30)
+                    .attr("y2", cy - 30)
+                    .attr("stroke", "gray")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowB)");
+            }
+            // Vertical Lines
+            if (y + 1 <= q) {
+                svg.append("line")
+                    .attr("x1", cx)
+                    .attr("x2", cx)
+                    .attr("y1", cy - sep_val + 37)
+                    .attr("y2", cy - 40)
+                    .attr("stroke", "gray")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowB)");
+            }
+            // Closer Order Next
+            if (x + 2 < y - 1){
+                svg.append("line")
+                    .attr("x1", cx + 2*sep_val - 30)
+                    .attr("x2", cx + 30)
+                    .attr("y1", cy - sep_val + 25)
+                    .attr("y2", cy - 25)
+                    .attr("stroke", "orange")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowC)");
+            }
         }
     }
+    // END BELOW THE EQUATOR ----------------------------------------------
 }
 
 /*
