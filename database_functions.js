@@ -20,12 +20,13 @@ async function filter_data() {
 
     // Filter elements based on their dimension (q)
     filtered_strata = strata.filter(function (element) {
-        var q = Number(document.getElementById("q").value);
+        var q = document.getElementById("q").value;
         var comp_q = document.getElementById("q_filter").value;
 
         if (q == "all") {
             return true;
         }
+        q = Number(q);
         if (comp_q == "eq") {
             if (Number(element.q) == q) {
                 return true;

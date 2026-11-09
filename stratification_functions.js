@@ -10,6 +10,11 @@ async function draw_stratification_diagram() {
 
     var q = Number(document.getElementById("q").value);
 
+    if (q > 20 || q < 2) {
+        alert("Invalid value entered!");
+        return;
+    }
+
     var div = document.getElementById("draw_diagram");
     div.innerHTML = "";
 
