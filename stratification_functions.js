@@ -24,12 +24,12 @@ async function draw_stratification_diagram() {
         return false;
     });
 
-    var radius = 40; // Radius for the circles in the stratification diagrams
-    var sep_val = 140; // Amount of pixels to seperate the circles in the stratification diagram
+    var radius = 32; // Radius for the circles in the stratification diagrams
+    var sep_val = 120; // Amount of pixels to seperate the circles in the stratification diagram
     let which_diagram = d3.select(`#draw_diagram`);
     let svg = which_diagram.append("svg")
         .attr("width", Math.max(400, sep_val * (Math.ceil((q + 1) / 2) + 2)) + 500)
-        .attr("height", sep_val * (2 * q - 1));
+        .attr("height", Math.max(500, sep_val * (2 * q - 1)));
 
     // DEFINE ARROWS ----------------------------------------------
     svg.append("defs")
@@ -82,7 +82,7 @@ async function draw_stratification_diagram() {
         .attr("x", legend_start_x + 30)
         .attr("y", legend_start_y + legend_sep + 5)
         .attr("text-anchor", "right")
-        .attr("font-size", "16px")
+        .attr("font-size", "20px")
         .style("fill", "black")
         .text(`Unknown Interaction With the SS Locus`);
 
@@ -98,7 +98,7 @@ async function draw_stratification_diagram() {
         .attr("x", legend_start_x + 30)
         .attr("y", legend_start_y + 2 * legend_sep + 5)
         .attr("text-anchor", "right")
-        .attr("font-size", "16px")
+        .attr("font-size", "20px")
         .style("fill", "black")
         .text(`Contained in the SS Locus`);
 
@@ -114,7 +114,7 @@ async function draw_stratification_diagram() {
         .attr("x", legend_start_x + 30)
         .attr("y", legend_start_y + 3 * legend_sep + 5)
         .attr("text-anchor", "right")
-        .attr("font-size", "16px")
+        .attr("font-size", "20px")
         .style("fill", "black")
         .text(`Intersects the SS Locus`);
 
@@ -130,7 +130,7 @@ async function draw_stratification_diagram() {
         .attr("x", legend_start_x + 30)
         .attr("y", legend_start_y + 4 * legend_sep + 5)
         .attr("text-anchor", "right")
-        .attr("font-size", "16px")
+        .attr("font-size", "20px")
         .style("fill", "black")
         .text(`Disjoint From the SS Locus`);
 
@@ -146,7 +146,7 @@ async function draw_stratification_diagram() {
         .attr("x", legend_start_x + 30)
         .attr("y", legend_start_y + 5 * legend_sep + 5)
         .attr("text-anchor", "right")
-        .attr("font-size", "16px")
+        .attr("font-size", "20px")
         .style("fill", "black")
         .text(`Closure (He) Order`);
 
@@ -162,18 +162,18 @@ async function draw_stratification_diagram() {
         .attr("x", legend_start_x + 30)
         .attr("y", legend_start_y + 6 * legend_sep + 5)
         .attr("text-anchor", "right")
-        .attr("font-size", "16px")
+        .attr("font-size", "20px")
         .style("fill", "black")
         .text(`Bruhat Order`);
     // END LEGEND ----------------------------------------------
 
     // MAKE THE TITLE ----------------------------------------------
     svg.append("text")
-        .attr("x", 200)
+        .attr("x", sep_val)
         .attr("y", 50)
-        .attr("text-anchor", "middle")
-        .attr("font-size", "24px")
-        .style("dominant-baseline", "middle")
+        .attr("text-anchor", "center")
+        .attr("font-size", "28px")
+        .style("dominant-baseline", "center")
         .style("fill", "black")
         .text(`Stratification Diagram for Signature (${q - 2}, 2)`);
     // END TITLE ----------------------------------------------
@@ -182,7 +182,7 @@ async function draw_stratification_diagram() {
     for (var y = q; y > Math.floor((q + 2) / 2); y--) {
         let cx = sep_val * (q - y + 2);
         for (var x = y - 1; x > q - y + 1; x--) {
-            let cy = sep_val * (2 * q - (x + y) + 1);
+            let cy = sep_val * (2 * q - (x + y));
 
             let which_strata = filtered_strata.filter(function (element) {
                 if (element.Strata[0] == x && element.Strata[1] == y) {
@@ -257,7 +257,7 @@ async function draw_stratification_diagram() {
     for (var x = 1; x <= Math.floor(q / 2); x++) {
         let cx = sep_val * x;
         for (var y = q + 1 - x; y >= 2 + x - 1; y--) {
-            cy = sep_val * (q - 2) + sep_val * (q - y - x + 2 + 1);
+            cy = sep_val * (q - 2) + sep_val * (q - y - x + 2);
             let which_strata = filtered_strata.filter(function (element) {
                 if (element.Strata[0] == x && element.Strata[1] == y) {
                     return true;
