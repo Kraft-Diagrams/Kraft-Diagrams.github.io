@@ -118,8 +118,18 @@
         </p>
 
         <p>
-        Indecomposible?
-        <input type="checkbox" id="indecomposible" onchange="filter_data()">
+            Sort by Stratum Dimension (Select -1 for All)
+            <select name="sd_filter" id="sd_filter" onchange="filter_data()">
+                <option value="eq" selected="selected">=</option>
+                <option value="le">&le;</option>
+                <option value="ge">&ge;</option>
+            </select>
+            <input type="number" id="StratumDim" name="StratumDim" min="-1" value="-1" onchange="filter_data()">
+        </p>
+
+        <p>
+        Indecomposable?
+        <input type="checkbox" id="Indecomposable" onchange="filter_data()">
         </p>
 
         <p>
@@ -129,7 +139,7 @@
                 <option value="Disjoint">Disjoint</option>
                 <option value="Contained In">Contained In</option>
                 <option value="Intersects">Intersects</option>
-                <option value="Unknown">Unknown</option>
+                <option value="Not Contained">Not Contained</option>
             </select>
         </p>
 
@@ -147,12 +157,13 @@
             <tr>
                 <th>Dimension q</th>
                 <th>Signature</th>
-                <th>Strata</th>
+                <th>Indices of Gamma</th>
+                <th>Stratum Dimension</th>
                 <th>Word(s)</th>
-                <th>EO Type</th>
-                <th>Hirashita Slope</th>
+                <th>Elementary Sequence</th>
+                <th>Harashita Slope</th>
                 <th>TL Slope</th>
-                <th>Indecomposible</th>
+                <th>Indecomposable</th>
                 <th>SS Locus</th>
                 <th>Kraft Diagram (On Toggle)</th>
             </tr>

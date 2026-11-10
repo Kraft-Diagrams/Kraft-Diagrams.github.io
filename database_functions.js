@@ -43,6 +43,30 @@ async function filter_data() {
         return false;
     });
 
+    // Filter elements based on their stratum dimension
+    filtered_strata = filtered_strata.filter(function (element) {
+        var sd = Number(document.getElementById("StratumDim").value);
+        var comp_sd = document.getElementById("sd_filter").value;
+
+        if (sd == -1) {
+            return true;
+        }
+        if (comp_sd == "eq") {
+            if (Number(element.StratumDim) == sd) {
+                return true;
+            }
+        } else if (comp_q == "le") {
+            if (Number(element.StratumDim) <= sd) {
+                return true;
+            }
+        } else if (comp_q == "ge") {
+            if (Number(element.StratumDim) >= sd) {
+                return true;
+            }
+        }
+        return false;
+    });
+
     // Filter elements based on signature (a, b)
     filtered_strata = filtered_strata.filter(function (element) {
         var b = document.getElementById("b").value;
@@ -56,11 +80,11 @@ async function filter_data() {
         return false;
     });
 
-    // Filter based on whether it is indecomposible
+    // Filter based on whether it is Indecomposable
     filtered_strata = filtered_strata.filter(function (element) {
-        if (document.getElementById("indecomposible").checked && element.Indecomposible.toString() == "true") {
+        if (document.getElementById("Indecomposable").checked && element.Indecomposable.toString() == "true") {
             return true;
-        } else if (document.getElementById("indecomposible").checked && element.Indecomposible.toString() == "false") {
+        } else if (document.getElementById("Indecomposable").checked && element.Indecomposable.toString() == "false") {
             return false;
         }
         return true;
@@ -84,11 +108,12 @@ async function filter_data() {
                         <td>${s.q.toString()}</td>
                         <td>(${s.Signature.toString().split(',').join(', ')})</td>
                         <td>${s.Strata.toString().split(',').join(', ')}</td>
+                        <td>${s.StratumDim.toString()}</td>
                         <td>${s.Words.join(', ')}</td>
                         <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                        <td>${s.Hirashita_Slope.toString().split(',').join('/')}</td>
+                        <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
                         <td>[${s.TL_Slope.toString()}]</td>
-                        <td>${String(s.Indecomposible).charAt(0).toUpperCase() + String(s.Indecomposible).slice(1)}</td>
+                        <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
                         <td>${s.SS_Locus_Interaction}</td>
                         <td><div id="${strata_id}"></div></td>
                     </tr>`;
