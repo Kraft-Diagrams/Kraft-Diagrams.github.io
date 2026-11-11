@@ -38,30 +38,30 @@ async function draw_stratification_diagram() {
 
     // DEFINE ARROWS ----------------------------------------------
     svg.append("defs")
-            .append("marker")
-            .attr("id", "arrowB")
-            .attr("viewBox", "0 0 10 10")
-            .attr("refX", 5)
-            .attr("refY", 5)
-            .attr("markerWidth", 5)
-            .attr("markerHeight", 5)
-            .attr("orient", "auto-start-reverse")
-            .append("path")
-            .attr("d", "M0,0L10,5L0,10")
-            .attr("fill", "gray");
+        .append("marker")
+        .attr("id", "arrowB")
+        .attr("viewBox", "0 0 10 10")
+        .attr("refX", 5)
+        .attr("refY", 5)
+        .attr("markerWidth", 5)
+        .attr("markerHeight", 5)
+        .attr("orient", "auto-start-reverse")
+        .append("path")
+        .attr("d", "M0,0L10,5L0,10")
+        .attr("fill", "gray");
 
     svg.append("defs")
-            .append("marker")
-            .attr("id", "arrowC")
-            .attr("viewBox", "0 0 10 10")
-            .attr("refX", 5)
-            .attr("refY", 5)
-            .attr("markerWidth", 5)
-            .attr("markerHeight", 5)
-            .attr("orient", "auto-start-reverse")
-            .append("path")
-            .attr("d", "M0,0L10,5L0,10")
-            .attr("fill", "orange");
+        .append("marker")
+        .attr("id", "arrowC")
+        .attr("viewBox", "0 0 10 10")
+        .attr("refX", 5)
+        .attr("refY", 5)
+        .attr("markerWidth", 5)
+        .attr("markerHeight", 5)
+        .attr("orient", "auto-start-reverse")
+        .append("path")
+        .attr("d", "M0,0L10,5L0,10")
+        .attr("fill", "orange");
 
     // MAKE THE LEGEND ----------------------------------------------
     var legend_start_x = Math.max(400, sep_val * (Math.ceil((q + 1) / 2) + 2)) + 50;
@@ -224,7 +224,7 @@ async function draw_stratification_diagram() {
             }
 
             // Outline type based on whether it is Indecomposable
-            if (which_strata[0].Indecomposable.toString() == "true"){
+            if (which_strata[0].Indecomposable.toString() == "true") {
                 svg.append("circle")
                     .attr("cx", cx)
                     .attr("cy", cy)
@@ -260,7 +260,7 @@ async function draw_stratification_diagram() {
 
             // Bruhat Order First
             // Diagonal arrows
-            if (y + 1 <= q){
+            if (y + 1 <= q) {
                 svg.append("line")
                     .attr("x1", cx - sep_val + radius)
                     .attr("x2", cx - radius)
@@ -282,9 +282,9 @@ async function draw_stratification_diagram() {
                     .attr("marker-end", "url(#arrowB)");
             }
             // Closer Order Next
-            if (y + 2 <= q){
+            if (y + 2 <= q) {
                 svg.append("line")
-                    .attr("x1", cx - 2*sep_val + radius)
+                    .attr("x1", cx - 2 * sep_val + radius)
                     .attr("x2", cx - radius)
                     .attr("y1", cy - sep_val + radius - 5)
                     .attr("y2", cy - radius + 5)
@@ -317,7 +317,7 @@ async function draw_stratification_diagram() {
             }
 
             // Outline type based on whether it is Indecomposable
-            if (which_strata[0].Indecomposable.toString() == "true"){
+            if (which_strata[0].Indecomposable.toString() == "true") {
                 svg.append("circle")
                     .attr("cx", cx)
                     .attr("cy", cy)
@@ -353,7 +353,7 @@ async function draw_stratification_diagram() {
 
             // Bruhat Order First
             // Diagonal arrows
-            if (x + 1 < y){
+            if (x + 1 < y) {
                 svg.append("line")
                     .attr("x1", cx + sep_val - radius)
                     .attr("x2", cx + radius)
@@ -375,9 +375,9 @@ async function draw_stratification_diagram() {
                     .attr("marker-end", "url(#arrowB)");
             }
             // Closer Order Next
-            if (x + 2 < y - 1){
+            if (x + 2 < y - 1) {
                 svg.append("line")
-                    .attr("x1", cx + 2*sep_val - radius)
+                    .attr("x1", cx + 2 * sep_val - radius)
                     .attr("x2", cx + radius)
                     .attr("y1", cy - sep_val + radius - 5)
                     .attr("y2", cy - radius + 5)
@@ -390,7 +390,7 @@ async function draw_stratification_diagram() {
     // END BELOW THE EQUATOR ----------------------------------------------
 }
 
-async function draw_partial_diagram(clicked_x, clicked_y){
+async function draw_partial_diagram(clicked_x, clicked_y) {
 
     // clicked_x and clicked_y should be the signature clicked.
 
@@ -419,30 +419,30 @@ async function draw_partial_diagram(clicked_x, clicked_y){
 
     // DEFINE ARROWS ----------------------------------------------
     svg.append("defs")
-            .append("marker")
-            .attr("id", "arrowB")
-            .attr("viewBox", "0 0 10 10")
-            .attr("refX", 5)
-            .attr("refY", 5)
-            .attr("markerWidth", 5)
-            .attr("markerHeight", 5)
-            .attr("orient", "auto-start-reverse")
-            .append("path")
-            .attr("d", "M0,0L10,5L0,10")
-            .attr("fill", "gray");
+        .append("marker")
+        .attr("id", "arrowB")
+        .attr("viewBox", "0 0 10 10")
+        .attr("refX", 5)
+        .attr("refY", 5)
+        .attr("markerWidth", 5)
+        .attr("markerHeight", 5)
+        .attr("orient", "auto-start-reverse")
+        .append("path")
+        .attr("d", "M0,0L10,5L0,10")
+        .attr("fill", "gray");
 
     svg.append("defs")
-            .append("marker")
-            .attr("id", "arrowC")
-            .attr("viewBox", "0 0 10 10")
-            .attr("refX", 5)
-            .attr("refY", 5)
-            .attr("markerWidth", 5)
-            .attr("markerHeight", 5)
-            .attr("orient", "auto-start-reverse")
-            .append("path")
-            .attr("d", "M0,0L10,5L0,10")
-            .attr("fill", "orange");
+        .append("marker")
+        .attr("id", "arrowC")
+        .attr("viewBox", "0 0 10 10")
+        .attr("refX", 5)
+        .attr("refY", 5)
+        .attr("markerWidth", 5)
+        .attr("markerHeight", 5)
+        .attr("orient", "auto-start-reverse")
+        .append("path")
+        .attr("d", "M0,0L10,5L0,10")
+        .attr("fill", "orange");
 
     // MAKE THE LEGEND ----------------------------------------------
     var legend_start_x = Math.max(400, sep_val * (Math.ceil((q + 1) / 2) + 2)) + 50;
@@ -580,7 +580,7 @@ async function draw_partial_diagram(clicked_x, clicked_y){
         .style("fill", "black")
         .text(`Stratification Diagram for Signature (${q - 2}, 2)`);
     svg.append("text")
-        .attr("x", sep_val*1.5)
+        .attr("x", sep_val * 1.5)
         .attr("y", 80)
         .attr("text-anchor", "center")
         .attr("font-size", "24px")
@@ -612,45 +612,58 @@ async function draw_partial_diagram(clicked_x, clicked_y){
                 color = "#D2D1E2";
             }
 
+            var opacity = 0.2;
+            // Bruhat Order
             if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) {
-                // Outline type based on whether it is Indecomposable
-                if (which_strata[0].Indecomposable.toString() == "true") {
-                    svg.append("circle")
-                        .attr("cx", cx)
-                        .attr("cy", cy)
-                        .attr("r", radius)
-                        .style("fill", color)
-                        .attr("stroke", "black")
-                        .attr("stroke-dasharray", "10 5")
-                        .attr("stroke-width", 3);
-                } else {
-                    svg.append("circle")
-                        .attr("cx", cx)
-                        .attr("cy", cy)
-                        .attr("r", radius)
-                        .style("fill", color)
-                        .attr("stroke", "black")
-                        .attr("stroke-width", 3);
-                }
+                opacity = 1;
+            }
+            // He Order
+            if (-2 * (clicked_x - x) == clicked_y - y){
+                opacity = 1;
+            }
 
-                svg.append("text")
-                    .attr("x", cx)
-                    .attr("y", cy)
-                    .attr("text-anchor", "middle")
-                    .attr("font-size", "20px")
-                    .style("dominant-baseline", "middle")
-                    .style("fill", "black")
-                    .text(`(${x}, ${y})`)
-                    .on("click", function () {
+            // Outline type based on whether it is Indecomposable
+            if (which_strata[0].Indecomposable.toString() == "true") {
+                svg.append("circle")
+                    .attr("cx", cx)
+                    .attr("cy", cy)
+                    .attr("r", radius)
+                    .style("fill", color)
+                    .attr("stroke", "black")
+                    .attr("stroke-dasharray", "10 5")
+                    .attr("stroke-width", 3)
+                    .attr("opacity", opacity);
+            } else {
+                svg.append("circle")
+                    .attr("cx", cx)
+                    .attr("cy", cy)
+                    .attr("r", radius)
+                    .style("fill", color)
+                    .attr("stroke", "black")
+                    .attr("stroke-width", 3)
+                    .attr("opacity", opacity);
+            }
+
+            svg.append("text")
+                .attr("x", cx)
+                .attr("y", cy)
+                .attr("text-anchor", "middle")
+                .attr("font-size", "20px")
+                .style("dominant-baseline", "middle")
+                .style("fill", "black")
+                .text(`(${x}, ${y})`)
+                .on("click", function () {
                     var strata = d3.select(this).text().slice(1, -1).split(", ");
                     var a = Number(strata[0]);
                     var b = Number(strata[1]);
                     draw_partial_diagram(a, b);
-                });
+                })
+                .attr("opacity", opacity);
 
-                // Bruhat Order First
+            // Bruhat Order First
+            if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) {
                 // Diagonal arrows
-                if (y + 1 <= q && y+1 >= clicked_y) {
+                if (y + 1 <= q && y + 1 >= clicked_y && x >= clicked_x) {
                     svg.append("line")
                         .attr("x1", cx - sep_val + radius)
                         .attr("x2", cx - radius)
@@ -661,7 +674,7 @@ async function draw_partial_diagram(clicked_x, clicked_y){
                         .attr("marker-end", "url(#arrowB)");
                 }
                 // Vertical Lines
-                if (x + 1 < q && x + 1 != y && x+1 >= clicked_x) {
+                if (x + 1 < q && x + 1 != y && x + 1 >= clicked_x && y >= clicked_y) {
                     svg.append("line")
                         .attr("x1", cx)
                         .attr("x2", cx)
@@ -671,17 +684,17 @@ async function draw_partial_diagram(clicked_x, clicked_y){
                         .attr("stroke-width", 2)
                         .attr("marker-end", "url(#arrowB)");
                 }
-                // Closer Order Next
-                if (y + 2 <= q) {
-                    svg.append("line")
-                        .attr("x1", cx - 2 * sep_val + radius)
-                        .attr("x2", cx - radius)
-                        .attr("y1", cy - sep_val + radius - 5)
-                        .attr("y2", cy - radius + 5)
-                        .attr("stroke", "orange")
-                        .attr("stroke-width", 2)
-                        .attr("marker-end", "url(#arrowC)");
-                }
+            }
+            // Closure Order
+            if (-2 * (clicked_x - x) == clicked_y - y && y + 2 <= q){
+                svg.append("line")
+                    .attr("x1", cx - 2 * sep_val + radius)
+                    .attr("x2", cx - radius)
+                    .attr("y1", cy - sep_val + radius - 5)
+                    .attr("y2", cy - radius + 5)
+                    .attr("stroke", "orange")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowC)");
             }
         }
     } // END ABOVE THE EQUATOR ----------------------------------------------
@@ -707,6 +720,16 @@ async function draw_partial_diagram(clicked_x, clicked_y){
                 color = "#D2D1E2"
             }
 
+            var opacity = 0.2;
+            // Bruhat Order
+            if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) {
+                opacity = 1;
+            }
+            // Closure Order
+            if (clicked_x - x == 2*(y - clicked_y)) {
+                opacity = 1;
+            }
+
             // Outline type based on whether it is Indecomposable
             if (which_strata[0].Indecomposable.toString() == "true") {
                 svg.append("circle")
@@ -716,7 +739,8 @@ async function draw_partial_diagram(clicked_x, clicked_y){
                     .style("fill", color)
                     .attr("stroke", "black")
                     .attr("stroke-dasharray", "10 5")
-                    .attr("stroke-width", 3);
+                    .attr("stroke-width", 3)
+                    .attr("opacity", opacity);
             } else {
                 svg.append("circle")
                     .attr("cx", cx)
@@ -724,9 +748,9 @@ async function draw_partial_diagram(clicked_x, clicked_y){
                     .attr("r", radius)
                     .style("fill", color)
                     .attr("stroke", "black")
-                    .attr("stroke-width", 3);
+                    .attr("stroke-width", 3)
+                    .attr("opacity", opacity);
             }
-
 
             svg.append("text")
                 .attr("x", cx)
@@ -741,33 +765,36 @@ async function draw_partial_diagram(clicked_x, clicked_y){
                     var a = Number(strata[0]);
                     var b = Number(strata[1]);
                     draw_partial_diagram(a, b);
-                });
+                })
+                .attr("opacity", opacity);
 
             // Bruhat Order First
-            // Diagonal arrows
-            if (x + 1 < y) {
-                svg.append("line")
-                    .attr("x1", cx + sep_val - radius)
-                    .attr("x2", cx + radius)
-                    .attr("y1", cy - sep_val + radius)
-                    .attr("y2", cy - radius)
-                    .attr("stroke", "gray")
-                    .attr("stroke-width", 2)
-                    .attr("marker-end", "url(#arrowB)");
+            if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) {
+                // Diagonal arrows
+                if (x + 1 < y) {
+                    svg.append("line")
+                        .attr("x1", cx + sep_val - radius)
+                        .attr("x2", cx + radius)
+                        .attr("y1", cy - sep_val + radius)
+                        .attr("y2", cy - radius)
+                        .attr("stroke", "gray")
+                        .attr("stroke-width", 2)
+                        .attr("marker-end", "url(#arrowB)");
+                }
+                // Vertical Lines
+                if (y + 1 <= q && y+1 <= clicked_y){
+                    svg.append("line")
+                        .attr("x1", cx)
+                        .attr("x2", cx)
+                        .attr("y1", cy - sep_val + radius + 7)
+                        .attr("y2", cy - radius - 10)
+                        .attr("stroke", "gray")
+                        .attr("stroke-width", 2)
+                        .attr("marker-end", "url(#arrowB)");
+                }
             }
-            // Vertical Lines
-            if (y + 1 <= q) {
-                svg.append("line")
-                    .attr("x1", cx)
-                    .attr("x2", cx)
-                    .attr("y1", cy - sep_val + radius + 7)
-                    .attr("y2", cy - radius - 10)
-                    .attr("stroke", "gray")
-                    .attr("stroke-width", 2)
-                    .attr("marker-end", "url(#arrowB)");
-            }
-            // Closer Order Next
-            if (x + 2 < y - 1) {
+            // Closure Order
+            if (clicked_x - x == 2*(y - clicked_y)){
                 svg.append("line")
                     .attr("x1", cx + 2 * sep_val - radius)
                     .attr("x2", cx + radius)
@@ -780,7 +807,7 @@ async function draw_partial_diagram(clicked_x, clicked_y){
         }
     }
     // END BELOW THE EQUATOR ----------------------------------------------
-    
+
 }
 /*
 .on("click", function () {
