@@ -282,12 +282,25 @@ async function draw_stratification_diagram() {
                     .attr("marker-end", "url(#arrowB)");
             }
             // Closer Order Next
-            if (y + 2 <= q) {
+            if (q >= 5 && y == q-x+2 && x >= 4 && x < q/2 + 1){
                 svg.append("line")
-                    .attr("x1", cx - 2 * sep_val + radius)
+                    .attr("x1", cx - (2) * sep_val + radius)
                     .attr("x2", cx - radius)
                     .attr("y1", cy - sep_val + radius - 5)
                     .attr("y2", cy - radius + 5)
+                    .attr("stroke", "orange")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowC)");
+            }
+            
+            if (q >= 7 && x >= 4 && x < q/2 && y >= 4+q-x && y <= q){
+                console.log(x, y);
+                svg.append("line")
+                    .attr("x1", cx + radius)
+                    //.attr("x1", cx - 2 * sep_val + radius)
+                    .attr("x2", cx + 2*sep_val - radius)
+                    .attr("y1", cy + radius - 5)
+                    .attr("y2", cy + sep_val - radius + 5)
                     .attr("stroke", "orange")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
@@ -375,12 +388,23 @@ async function draw_stratification_diagram() {
                     .attr("marker-end", "url(#arrowB)");
             }
             // Closer Order Next
-            if (x + 2 < y - 1) {
+            if (q >= 5 && x == q-y+1 && y > q/2 + 2 && y <= q){
                 svg.append("line")
                     .attr("x1", cx + 2 * sep_val - radius)
                     .attr("x2", cx + radius)
                     .attr("y1", cy - sep_val + radius - 5)
                     .attr("y2", cy - radius + 5)
+                    .attr("stroke", "orange")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowC)");
+            }
+            if (q >= 7 && x >= 3 && x < q/2 && y > q/2 + 1 && y <= q-x+2){
+                console.log(x, y);
+                svg.append("line")
+                    .attr("x1", cx - radius)
+                    .attr("x2", cx - 2*sep_val + radius)
+                    .attr("y1", cy + radius)
+                    .attr("y2", cy + sep_val - radius )
                     .attr("stroke", "orange")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
@@ -456,7 +480,7 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
         .style("fill", "black")
         .text("Legend");
 
-    // Not COntained in the SS Locus
+    // Not Contained in the SS Locus
     svg.append("circle")
         .attr("cx", legend_start_x)
         .attr("cy", legend_start_y + legend_sep)
