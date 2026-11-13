@@ -14,9 +14,11 @@ async function filter_data() {
     const strata = await getData();
 
     var table_body = document.getElementById("strata-body");
+    var table_head = document.getElementById("strata-head");
 
     // Delete what is currently in the table, because we are going to replace it
     table_body.innerHTML = "";
+    table_head.innerHTML = "";
 
     // Filter elements based on their dimension (q)
     filtered_strata = strata.filter(function (element) {
@@ -92,6 +94,36 @@ async function filter_data() {
 
     var draw_diagrams = document.getElementById("display_diagrams").checked;
 
+    if (draw_diagrams){
+        var head_row = `<tr>
+                <th>Dimension q</th>
+                <th>Signature</th>
+                <th>Indices of Gamma</th>
+                <th>Stratum Dimension</th>
+                <th>Word(s)</th>
+                <th>Elementary Sequence</th>
+                <th>Harashita Slope</th>
+                <th>TL Slope</th>
+                <th>Indecomposable</th>
+                <th>SS Locus</th>
+                <th>Kraft Diagram</th>
+            </tr>`;
+    } else {
+        var head_row = `<tr>
+                <th>Dimension q</th>
+                <th>Signature</th>
+                <th>Indices of Gamma</th>
+                <th>Stratum Dimension</th>
+                <th>Word(s)</th>
+                <th>Elementary Sequence</th>
+                <th>Harashita Slope</th>
+                <th>TL Slope</th>
+                <th>Indecomposable</th>
+                <th>SS Locus</th>
+            </tr>`;
+    }
+    table_head.insertAdjacentHTML("beforeend", head_row);
+
     // Filter based on the strata's interaction with the SS Locus
     filtered_strata = filtered_strata.filter(function (element) {
         var interaction = document.getElementById("SS Locus").value;
@@ -103,7 +135,8 @@ async function filter_data() {
 
     for (s of filtered_strata) {
         var strata_id = "strata-".concat(s.q.toString().concat('__', s.Strata.toString().split(',').join('_')));
-        let new_row = `
+        if (draw_diagrams) {
+            let new_row = `
                     <tr>
                         <td>${s.q.toString()}</td>
                         <td>(${s.Signature.toString().split(',').join(', ')})</td>
@@ -117,9 +150,23 @@ async function filter_data() {
                         <td>${s.SS_Locus_Interaction}</td>
                         <td><div id="${strata_id}"></div></td>
                     </tr>`;
-        table_body.insertAdjacentHTML("beforeend", new_row);
-        if (draw_diagrams){
+            table_body.insertAdjacentHTML("beforeend", new_row);
             draw_kraft_diagram(strata_id);
+        } else {
+            let new_row = `
+                    <tr>
+                        <td>${s.q.toString()}</td>
+                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
+                        <td>${s.Strata.toString().split(',').join(', ')}</td>
+                        <td>${s.StratumDim.toString()}</td>
+                        <td>${s.Words.join(', ')}</td>
+                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
+                        <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
+                        <td>[${s.TL_Slope.toString()}]</td>
+                        <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
+                        <td>${s.SS_Locus_Interaction}</td>
+                    </tr>`;
+            table_body.insertAdjacentHTML("beforeend", new_row);
         }
     }
 }
