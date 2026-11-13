@@ -250,13 +250,13 @@ async function draw_stratification_diagram() {
                 .attr("font-size", "20px")
                 .style("dominant-baseline", "middle")
                 .style("fill", "black")
-                .text(`(${x}, ${y})`)
-                .on("click", function () {
+                .text(`(${x}, ${y})`);
+                /*.on("click", function () {
                     var strata = d3.select(this).text().slice(1, -1).split(", ");
                     var a = Number(strata[0]);
                     var b = Number(strata[1]);
                     draw_partial_diagram(a, b);
-                });
+                });*/
 
             // Bruhat Order First
             // Diagonal arrows
@@ -294,7 +294,6 @@ async function draw_stratification_diagram() {
             }
             
             if (q >= 7 && x >= 4 && x < q/2 && y >= 4+q-x && y <= q){
-                console.log(x, y);
                 svg.append("line")
                     .attr("x1", cx + radius)
                     //.attr("x1", cx - 2 * sep_val + radius)
@@ -356,13 +355,13 @@ async function draw_stratification_diagram() {
                 .attr("font-size", "20px")
                 .style("dominant-baseline", "middle")
                 .style("fill", "black")
-                .text(`(${x}, ${y})`)
-                .on("click", function () {
+                .text(`(${x}, ${y})`);
+                /*.on("click", function () {
                     var strata = d3.select(this).text().slice(1, -1).split(", ");
                     var a = Number(strata[0]);
                     var b = Number(strata[1]);
                     draw_partial_diagram(a, b);
-                });
+                });*/
 
             // Bruhat Order First
             // Diagonal arrows
@@ -399,7 +398,6 @@ async function draw_stratification_diagram() {
                     .attr("marker-end", "url(#arrowC)");
             }
             if (q >= 7 && x >= 3 && x < q/2 && y > q/2 + 1 && y <= q-x+2){
-                console.log(x, y);
                 svg.append("line")
                     .attr("x1", cx - radius)
                     .attr("x2", cx - 2*sep_val + radius)
