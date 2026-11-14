@@ -640,7 +640,7 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                     .attr("cy", cy)
                     .attr("r", radius+5)
                     .style("fill", "none")
-                    .attr("stroke", "black")
+                    .attr("stroke", "deeppink")
                     .attr("stroke-width", 3)
             }
 
@@ -747,7 +747,7 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                     .attr("cy", cy)
                     .attr("r", radius+5)
                     .style("fill", "none")
-                    .attr("stroke", "black")
+                    .attr("stroke", "deeppink")
                     .attr("stroke-width", 3)
             }
 
