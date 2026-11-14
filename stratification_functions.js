@@ -250,13 +250,13 @@ async function draw_stratification_diagram() {
                 .attr("font-size", "20px")
                 .style("dominant-baseline", "middle")
                 .style("fill", "black")
-                .text(`(${x}, ${y})`);
-                /*.on("click", function () {
+                .text(`(${x}, ${y})`)
+                .on("click", function () {
                     var strata = d3.select(this).text().slice(1, -1).split(", ");
                     var a = Number(strata[0]);
                     var b = Number(strata[1]);
                     draw_partial_diagram(a, b);
-                });*/
+                });
 
             // Bruhat Order First
             // Diagonal arrows
@@ -282,7 +282,7 @@ async function draw_stratification_diagram() {
                     .attr("marker-end", "url(#arrowB)");
             }
             // Closer Order Next
-            if (q >= 5 && y == q-x+2 && x >= 4 && x < q/2 + 1){
+            if (q >= 5 && y == q - x + 2 && x >= 4 && x < q / 2 + 1) {
                 svg.append("line")
                     .attr("x1", cx - (2) * sep_val + radius)
                     .attr("x2", cx - radius)
@@ -292,12 +292,12 @@ async function draw_stratification_diagram() {
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
             }
-            
-            if (q >= 7 && x >= 4 && x < q/2 && y >= 4+q-x && y <= q){
+
+            if (q >= 7 && x >= 4 && x < q / 2 && y >= 4 + q - x && y <= q) {
                 svg.append("line")
                     .attr("x1", cx + radius)
                     //.attr("x1", cx - 2 * sep_val + radius)
-                    .attr("x2", cx + 2*sep_val - radius)
+                    .attr("x2", cx + 2 * sep_val - radius)
                     .attr("y1", cy + radius - 5)
                     .attr("y2", cy + sep_val - radius + 5)
                     .attr("stroke", "orange")
@@ -355,13 +355,13 @@ async function draw_stratification_diagram() {
                 .attr("font-size", "20px")
                 .style("dominant-baseline", "middle")
                 .style("fill", "black")
-                .text(`(${x}, ${y})`);
-                /*.on("click", function () {
+                .text(`(${x}, ${y})`)
+                .on("click", function () {
                     var strata = d3.select(this).text().slice(1, -1).split(", ");
                     var a = Number(strata[0]);
                     var b = Number(strata[1]);
                     draw_partial_diagram(a, b);
-                });*/
+                });
 
             // Bruhat Order First
             // Diagonal arrows
@@ -387,7 +387,7 @@ async function draw_stratification_diagram() {
                     .attr("marker-end", "url(#arrowB)");
             }
             // Closer Order Next
-            if (q >= 5 && x == q-y+1 && y > q/2 + 2 && y <= q){
+            if (q >= 5 && x == q - y + 1 && y > q / 2 + 2 && y <= q) {
                 svg.append("line")
                     .attr("x1", cx + 2 * sep_val - radius)
                     .attr("x2", cx + radius)
@@ -397,12 +397,12 @@ async function draw_stratification_diagram() {
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
             }
-            if (q >= 7 && x >= 3 && x < q/2 && y > q/2 + 1 && y <= q-x+2){
+            if (q >= 7 && x >= 3 && x < q / 2 && y > q / 2 + 1 && y <= q - x + 2) {
                 svg.append("line")
                     .attr("x1", cx - radius)
-                    .attr("x2", cx - 2*sep_val + radius)
+                    .attr("x2", cx - 2 * sep_val + radius)
                     .attr("y1", cy + radius)
-                    .attr("y2", cy + sep_val - radius )
+                    .attr("y2", cy + sep_val - radius)
                     .attr("stroke", "orange")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
@@ -634,14 +634,20 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 color = "#D2D1E2";
             }
 
-            var opacity = 0.2;
-            // Bruhat Order
-            if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) {
-                opacity = 1;
+            if (x == clicked_x && y == clicked_y){
+                svg.append("circle")
+                    .attr("cx", cx)
+                    .attr("cy", cy)
+                    .attr("r", radius+5)
+                    .style("fill", "none")
+                    .attr("stroke", "black")
+                    .attr("stroke-width", 3)
             }
-            // He Order
-            if (-2 * (clicked_x - x) == clicked_y - y){
-                opacity = 1;
+
+            var opacity = 1;
+            // Bruhat Order
+            if ((x < clicked_x && y > clicked_y) || (x > clicked_x && y < clicked_y)){
+                opacity = 0.2
             }
 
             // Outline type based on whether it is Indecomposable
@@ -683,40 +689,27 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 .attr("opacity", opacity);
 
             // Bruhat Order First
-            if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) {
-                // Diagonal arrows
-                if (y + 1 <= q && y + 1 >= clicked_y && x >= clicked_x) {
-                    svg.append("line")
-                        .attr("x1", cx - sep_val + radius)
-                        .attr("x2", cx - radius)
-                        .attr("y1", cy - sep_val + radius)
-                        .attr("y2", cy - radius)
-                        .attr("stroke", "gray")
-                        .attr("stroke-width", 2)
-                        .attr("marker-end", "url(#arrowB)");
-                }
-                // Vertical Lines
-                if (x + 1 < q && x + 1 != y && x + 1 >= clicked_x && y >= clicked_y) {
-                    svg.append("line")
-                        .attr("x1", cx)
-                        .attr("x2", cx)
-                        .attr("y1", cy - sep_val + radius + 7)
-                        .attr("y2", cy - radius - 10)
-                        .attr("stroke", "gray")
-                        .attr("stroke-width", 2)
-                        .attr("marker-end", "url(#arrowB)");
-                }
-            }
-            // Closure Order
-            if (-2 * (clicked_x - x) == clicked_y - y && y + 2 <= q){
+            if (opacity == 1 && ((x-1 >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) && x+y != q+2){
+                // Vertical arrows
                 svg.append("line")
-                    .attr("x1", cx - 2 * sep_val + radius)
-                    .attr("x2", cx - radius)
-                    .attr("y1", cy - sep_val + radius - 5)
-                    .attr("y2", cy - radius + 5)
-                    .attr("stroke", "orange")
+                    .attr("x1", cx)
+                    .attr("x2", cx)
+                    .attr("y1", cy + radius + 7)
+                    .attr("y2", cy + sep_val - radius - 7)
+                    .attr("stroke", "gray")
                     .attr("stroke-width", 2)
-                    .attr("marker-end", "url(#arrowC)");
+                    .attr("marker-end", "url(#arrowB)");
+            }
+            if (opacity == 1 && ((x <= clicked_x && y <= clicked_y) || (x >= clicked_x && y-1 >= clicked_y)) && (x != y-1) && x + y != q + 2){
+                // Diagonal Lines
+                svg.append("line")
+                    .attr("x1", cx + radius)
+                    .attr("x2", cx + sep_val - radius)
+                    .attr("y1", cy + radius)
+                    .attr("y2", cy + sep_val - radius)
+                    .attr("stroke", "gray")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowB)");
             }
         }
     } // END ABOVE THE EQUATOR ----------------------------------------------
@@ -742,14 +735,20 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 color = "#D2D1E2"
             }
 
-            var opacity = 0.2;
+            var opacity = 1;
             // Bruhat Order
-            if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) {
-                opacity = 1;
+            if ((x < clicked_x && y > clicked_y) || (x > clicked_x && y < clicked_y)){
+                opacity = 0.2
             }
-            // Closure Order
-            if (clicked_x - x == 2*(y - clicked_y)) {
-                opacity = 1;
+
+            if (x == clicked_x && y == clicked_y){
+                svg.append("circle")
+                    .attr("cx", cx)
+                    .attr("cy", cy)
+                    .attr("r", radius+5)
+                    .style("fill", "none")
+                    .attr("stroke", "black")
+                    .attr("stroke-width", 3)
             }
 
             // Outline type based on whether it is Indecomposable
@@ -791,130 +790,31 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 .attr("opacity", opacity);
 
             // Bruhat Order First
-            if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) {
-                // Diagonal arrows
-                if (x + 1 < y) {
-                    svg.append("line")
-                        .attr("x1", cx + sep_val - radius)
-                        .attr("x2", cx + radius)
-                        .attr("y1", cy - sep_val + radius)
-                        .attr("y2", cy - radius)
-                        .attr("stroke", "gray")
-                        .attr("stroke-width", 2)
-                        .attr("marker-end", "url(#arrowB)");
-                }
-                // Vertical Lines
-                if (y + 1 <= q && y+1 <= clicked_y){
-                    svg.append("line")
-                        .attr("x1", cx)
-                        .attr("x2", cx)
-                        .attr("y1", cy - sep_val + radius + 7)
-                        .attr("y2", cy - radius - 10)
-                        .attr("stroke", "gray")
-                        .attr("stroke-width", 2)
-                        .attr("marker-end", "url(#arrowB)");
-                }
-            }
-            // Closure Order
-            if (clicked_x - x == 2*(y - clicked_y)){
+            if (opacity == 1 && ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y+1 <= clicked_y)) && y < q){
+                // Vertical arrows
                 svg.append("line")
-                    .attr("x1", cx + 2 * sep_val - radius)
-                    .attr("x2", cx + radius)
-                    .attr("y1", cy - sep_val + radius - 5)
-                    .attr("y2", cy - radius + 5)
-                    .attr("stroke", "orange")
+                    .attr("x1", cx)
+                    .attr("x2", cx)
+                    .attr("y1", cy - sep_val + radius + 7)
+                    .attr("y2", cy - radius - 7)
+                    .attr("stroke", "gray")
                     .attr("stroke-width", 2)
-                    .attr("marker-end", "url(#arrowC)");
+                    .attr("marker-end", "url(#arrowB)");
+            }
+            if (opacity == 1 && ((x+1 <= clicked_x && y <= clicked_y) || (x >= clicked_x && y >= clicked_y)) && (x != y-1)){
+                // Diagonal Lines
+                svg.append("line")
+                    .attr("x1", cx + sep_val - radius)
+                    .attr("x2", cx + radius)
+                    .attr("y1", cy - sep_val + radius)
+                    .attr("y2", cy - radius)
+                    .attr("stroke", "gray")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowB)");
             }
         }
     }
     // END BELOW THE EQUATOR ----------------------------------------------
 
 }
-/*
-.on("click", function () {
-                    // BRUHAT ORDER ---------------------------------------------
-                    var bruhat = document.getElementById("Bruhat");
-
-                    var strata = d3.select(this).text().slice(1, -1).split(", ");
-                    var a = Number(strata[0]);
-                    var b = Number(strata[1]);
-
-                    bruhat.innerHTML = `<table id='bruhat-order' style="width:80%">
-                        <thead>
-                        <tr>
-                            <th colspan="3">Bruhat Order for Strata (${a}, ${b})</th>
-                        </tr>
-                        <tr>
-                            <th>Above</th>
-                            <th>Below</th>
-                            <th>Unrelated</th>
-                        </tr>
-                        </thead>
-                        <tbody id="bruhat-body">
-                            <td><ul id="bruhat-above"></ul></td>
-                            <td><ul id="bruhat-below"></ul></td>
-                            <td><ul id="bruhat-unrelated"></ul></td>
-                        </tbody>
-                        </table>`;
-
-                    var above_list = document.getElementById("bruhat-above");
-                    var below_list = document.getElementById("bruhat-below");
-                    var unrelated_list = document.getElementById("bruhat-unrelated");
-
-                    for (var i = 1; i < q; i++) {
-                        for (var j = i + 1; j <= q; j++) {
-                            if (i != a || j != b) {
-                                if (i >= a && j >= b) {
-                                    above_list.innerHTML += `<li>(${i}, ${j})</li>`;
-                                } else if (i <= a && j <= b) {
-                                    below_list.innerHTML += `<li>(${i}, ${j})</li>`;
-                                } else {
-                                    unrelated_list.innerHTML += `<li>(${i}, ${j})</li>`;
-                                }
-                            }
-                        }
-                    }
-
-                    // HE ORDER ---------------------------------------------
-                    var he = document.getElementById("He");
-
-                    he.innerHTML = `<table id='he-order'>
-                        <thead>
-                        <tr>
-                            <th colspan="3">He Order for Strata (${a}, ${b})</th>
-                        </tr>
-                        <tr>
-                            <th>Above</th>
-                            <th>Below</th>
-                            <th>Unrelated</th>
-                        </tr>
-                        </thead>
-                        <tbody id="he-body">
-                            <td><ul id="he-above"></ul></td>
-                            <td><ul id="he-below"></ul></td>
-                            <td><ul id="he-unrelated"></ul></td>
-                        </tbody>
-                        </table>`;
-
-                    var above_list_he = document.getElementById("he-above");
-                    var below_list_he = document.getElementById("he-below");
-                    var unrelated_list_he = document.getElementById("he-unrelated");
-
-                    for (var i = 1; i < q; i++) {
-                        for (var j = i + 1; j <= q; j++) {
-                            if (i != a || j != b) {
-                                if ((a - i) * 2 == (j - b)) {
-                                    above_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
-                                } else if ((j - b) * 2 == (a - i)) {
-                                    below_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
-                                } else {
-                                    unrelated_list_he.innerHTML += `<li>(${i}, ${j})</li>`;
-                                }
-                            }
-                        }
-                    }
-
-                });
-*/
 
