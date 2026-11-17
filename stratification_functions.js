@@ -281,7 +281,7 @@ async function draw_stratification_diagram() {
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowB)");
             }
-            // Closer Order Next
+            // Closure Order Next
             if (q >= 5 && y == q - x + 2 && x >= 4 && x < q / 2 + 1) {
                 svg.append("line")
                     .attr("x1", cx - (2) * sep_val + radius)
@@ -386,7 +386,7 @@ async function draw_stratification_diagram() {
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowB)");
             }
-            // Closer Order Next
+            // ClosureOrder Next
             if (q >= 5 && x == q - y + 1 && y > q / 2 + 2 && y <= q) {
                 svg.append("line")
                     .attr("x1", cx + 2 * sep_val - radius)
@@ -611,6 +611,78 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
         .text(`Ordering for Strata (${clicked_x}, ${clicked_y})`);
     // END TITLE ----------------------------------------------
 
+    // Indicate which node has been clicked
+    if (clicked_x + clicked_y >= q + 2){
+    svg.append("circle")
+        .attr("cx", sep_val * (q - clicked_y + 2))
+        .attr("cy", sep_val * (2 * q - (clicked_x + clicked_y) + 0.5))
+        .attr("r", radius + 5)
+        .style("fill", "none")
+        .attr("stroke", "deeppink")
+        .attr("stroke-width", 3);
+    } else {
+        svg.append("circle")
+        .attr("cx", sep_val * clicked_x)
+        .attr("cy", sep_val * (q - 2) + sep_val * (q - clicked_y - clicked_x + 2.5))
+        .attr("r", radius + 5)
+        .style("fill", "none")
+        .attr("stroke", "deeppink")
+        .attr("stroke-width", 3);
+    }
+
+
+    // Use a map to indicate which strata are in the orders of the clicked strata
+    // Bruhat Order
+    var order_map = new Map();
+    for (var x = 1; x <= q-1; x++){
+        for (var y = 2; y <= q; y++){
+            if (x < y) {
+                if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)){
+                    order_map.set(`${x.toString()},${y.toString()}`, 1);
+                } else {
+                    order_map.set(`${x.toString()},${y.toString()}`, 0.2);
+                }
+            }
+        }
+    }
+    
+    
+    // Closure Order - Above the Equator
+    for (var x = q-1; x >= 1; x--){
+        for (var y = 2; y <= q; y++){
+            if (order_map.get(`${x.toString()},${y.toString()}`) == 1 && (q >= 5 && y == q - x + 2 && x >= 4 && x < q / 2 + 1)) {
+                order_map.set(`${(x-1).toString()},${(y+2).toString()}`, 1);
+                for (var x_temp = x-1; x_temp < y+2; x_temp++){
+                    order_map.set(`${(x_temp).toString()},${(y+2).toString()}`, 1);
+                }
+            }
+            if (order_map.get(`${x.toString()},${y.toString()}`) == 1 && (q >= 7 && x >= 4 && x < q / 2 && y >= 4 + q - x && y <= q)) {
+                order_map.set(`${(x-1).toString()},${(y+2).toString()}`, 1);
+                for (var x_temp = x-1; x_temp < y+2; x_temp++){
+                    order_map.set(`${(x_temp).toString()},${(y+2).toString()}`, 1);
+                }
+            }
+        }
+    }
+    // Closure Order - Below the Equator
+    for (var x = q-1; x >= 1; x--){
+        for (var y = 2; y <= q; y++){
+            if (order_map.get(`${x.toString()},${y.toString()}`) == 1 && (q >= 5 && x == q - y + 1 && y > q / 2 + 2 && y <= q)) {
+                order_map.set(`${(x-2).toString()},${(y+1).toString()}`, 1);
+                for (var y_temp = y+1; y_temp > x; y_temp--){
+                    order_map.set(`${(x-2).toString()},${(y_temp).toString()}`, 1);
+                }
+            }
+            if (order_map.get(`${x.toString()},${y.toString()}`) == 1 && (q >= 7 && x >= 3 && x < q / 2 && y > q / 2 + 1 && y <= q - x + 2)) {
+                order_map.set(`${(x-2).toString()},${(y+1).toString()}`, 1);
+                for (var y_temp = y+1; y_temp > x; y_temp--){
+                    order_map.set(`${(x_temp).toString()},${(y+1).toString()}`, 1);
+                }
+            }
+        }
+    }
+    
+
     // ABOVE THE EQUATOR ----------------------------------------------
     for (var y = q; y > Math.floor((q + 2) / 2); y--) {
         let cx = sep_val * (q - y + 2);
@@ -624,6 +696,8 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 return false;
             });
 
+            var opacity = order_map.get(`${x.toString()},${y.toString()}`);
+
             // Interior color based on the strata's interaction with the SS Locus
             let color = "white";
             if (which_strata[0].SS_Locus_Interaction == "Contained In") {
@@ -632,22 +706,6 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 color = "#9ACFF1";
             } else if (which_strata[0].SS_Locus_Interaction == "Disjoint") {
                 color = "#D2D1E2";
-            }
-
-            if (x == clicked_x && y == clicked_y){
-                svg.append("circle")
-                    .attr("cx", cx)
-                    .attr("cy", cy)
-                    .attr("r", radius+5)
-                    .style("fill", "none")
-                    .attr("stroke", "deeppink")
-                    .attr("stroke-width", 3)
-            }
-
-            var opacity = 1;
-            // Bruhat Order
-            if ((x < clicked_x && y > clicked_y) || (x > clicked_x && y < clicked_y)){
-                opacity = 0.2
             }
 
             // Outline type based on whether it is Indecomposable
@@ -688,28 +746,28 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 })
                 .attr("opacity", opacity);
 
-            // Bruhat Order First
-            if (opacity == 1 && ((x-1 >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) && x+y != q+2){
-                // Vertical arrows
+                // Closure Order Next
+            if (opacity == 1 && q >= 5 && y == q - x + 2 && x >= 4 && x < q / 2 + 1) {
                 svg.append("line")
-                    .attr("x1", cx)
-                    .attr("x2", cx)
-                    .attr("y1", cy + radius + 7)
-                    .attr("y2", cy + sep_val - radius - 7)
-                    .attr("stroke", "gray")
+                    .attr("x1", cx - (2) * sep_val + radius)
+                    .attr("x2", cx - radius)
+                    .attr("y1", cy - sep_val + radius - 5)
+                    .attr("y2", cy - radius + 5)
+                    .attr("stroke", "orange")
                     .attr("stroke-width", 2)
-                    .attr("marker-end", "url(#arrowB)");
+                    .attr("marker-end", "url(#arrowC)");
             }
-            if (opacity == 1 && ((x <= clicked_x && y <= clicked_y) || (x >= clicked_x && y-1 >= clicked_y)) && (x != y-1) && x + y != q + 2){
-                // Diagonal Lines
+
+            if (opacity == 1 && q >= 7 && x >= 4 && x < q / 2 && y >= 4 + q - x && y <= q) {
                 svg.append("line")
                     .attr("x1", cx + radius)
-                    .attr("x2", cx + sep_val - radius)
-                    .attr("y1", cy + radius)
-                    .attr("y2", cy + sep_val - radius)
-                    .attr("stroke", "gray")
+                    //.attr("x1", cx - 2 * sep_val + radius)
+                    .attr("x2", cx + 2 * sep_val - radius)
+                    .attr("y1", cy + radius - 5)
+                    .attr("y2", cy + sep_val - radius + 5)
+                    .attr("stroke", "orange")
                     .attr("stroke-width", 2)
-                    .attr("marker-end", "url(#arrowB)");
+                    .attr("marker-end", "url(#arrowC)");
             }
         }
     } // END ABOVE THE EQUATOR ----------------------------------------------
@@ -726,6 +784,8 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 return false;
             });
 
+            var opacity = order_map.get(`${x.toString()},${y.toString()}`);
+
             let color = "white";
             if (which_strata[0].SS_Locus_Interaction == "Contained In") {
                 color = "#BFD6A1";
@@ -733,22 +793,6 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 color = "#9ACFF1";
             } else if (which_strata[0].SS_Locus_Interaction == "Disjoint") {
                 color = "#D2D1E2"
-            }
-
-            var opacity = 1;
-            // Bruhat Order
-            if ((x < clicked_x && y > clicked_y) || (x > clicked_x && y < clicked_y)){
-                opacity = 0.2
-            }
-
-            if (x == clicked_x && y == clicked_y){
-                svg.append("circle")
-                    .attr("cx", cx)
-                    .attr("cy", cy)
-                    .attr("r", radius+5)
-                    .style("fill", "none")
-                    .attr("stroke", "deeppink")
-                    .attr("stroke-width", 3)
             }
 
             // Outline type based on whether it is Indecomposable
@@ -789,28 +833,26 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 })
                 .attr("opacity", opacity);
 
-            // Bruhat Order First
-            if (opacity == 1 && ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y+1 <= clicked_y)) && y < q){
-                // Vertical arrows
+            //  CLosure Order Next
+            if (opacity == 1 && q >= 5 && x == q - y + 1 && y > q / 2 + 2 && y <= q) {
                 svg.append("line")
-                    .attr("x1", cx)
-                    .attr("x2", cx)
-                    .attr("y1", cy - sep_val + radius + 7)
-                    .attr("y2", cy - radius - 7)
-                    .attr("stroke", "gray")
-                    .attr("stroke-width", 2)
-                    .attr("marker-end", "url(#arrowB)");
-            }
-            if (opacity == 1 && ((x+1 <= clicked_x && y <= clicked_y) || (x >= clicked_x && y >= clicked_y)) && (x != y-1)){
-                // Diagonal Lines
-                svg.append("line")
-                    .attr("x1", cx + sep_val - radius)
+                    .attr("x1", cx + 2 * sep_val - radius)
                     .attr("x2", cx + radius)
-                    .attr("y1", cy - sep_val + radius)
-                    .attr("y2", cy - radius)
-                    .attr("stroke", "gray")
+                    .attr("y1", cy - sep_val + radius - 5)
+                    .attr("y2", cy - radius + 5)
+                    .attr("stroke", "orange")
                     .attr("stroke-width", 2)
-                    .attr("marker-end", "url(#arrowB)");
+                    .attr("marker-end", "url(#arrowC)");
+            }
+            if (opacity == 1 && q >= 7 && x >= 3 && x < q / 2 && y > q / 2 + 1 && y <= q - x + 2) {
+                svg.append("line")
+                    .attr("x1", cx - radius)
+                    .attr("x2", cx - 2 * sep_val + radius)
+                    .attr("y1", cy + radius)
+                    .attr("y2", cy + sep_val - radius)
+                    .attr("stroke", "orange")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowC)");
             }
         }
     }
