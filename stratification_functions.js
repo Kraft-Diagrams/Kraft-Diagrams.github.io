@@ -296,7 +296,6 @@ async function draw_stratification_diagram() {
             if (q >= 7 && x >= 4 && x < q / 2 && y >= 4 + q - x && y <= q) {
                 svg.append("line")
                     .attr("x1", cx + radius)
-                    //.attr("x1", cx - 2 * sep_val + radius)
                     .attr("x2", cx + 2 * sep_val - radius)
                     .attr("y1", cy + radius - 5)
                     .attr("y2", cy + sep_val - radius + 5)
@@ -612,32 +611,32 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
     // END TITLE ----------------------------------------------
 
     // Indicate which node has been clicked
-    if (clicked_x + clicked_y >= q + 2){
-    svg.append("circle")
-        .attr("cx", sep_val * (q - clicked_y + 2))
-        .attr("cy", sep_val * (2 * q - (clicked_x + clicked_y) + 0.5))
-        .attr("r", radius + 5)
-        .style("fill", "none")
-        .attr("stroke", "deeppink")
-        .attr("stroke-width", 3);
+    if (clicked_x + clicked_y >= q + 2) {
+        svg.append("circle")
+            .attr("cx", sep_val * (q - clicked_y + 2))
+            .attr("cy", sep_val * (2 * q - (clicked_x + clicked_y) + 0.5))
+            .attr("r", radius + 5)
+            .style("fill", "none")
+            .attr("stroke", "deeppink")
+            .attr("stroke-width", 3);
     } else {
         svg.append("circle")
-        .attr("cx", sep_val * clicked_x)
-        .attr("cy", sep_val * (q - 2) + sep_val * (q - clicked_y - clicked_x + 2.5))
-        .attr("r", radius + 5)
-        .style("fill", "none")
-        .attr("stroke", "deeppink")
-        .attr("stroke-width", 3);
+            .attr("cx", sep_val * clicked_x)
+            .attr("cy", sep_val * (q - 2) + sep_val * (q - clicked_y - clicked_x + 2.5))
+            .attr("r", radius + 5)
+            .style("fill", "none")
+            .attr("stroke", "deeppink")
+            .attr("stroke-width", 3);
     }
 
 
     // Use a map to indicate which strata are in the orders of the clicked strata
     // Bruhat Order
     var order_map = new Map();
-    for (var x = 1; x <= q-1; x++){
-        for (var y = 2; y <= q; y++){
+    for (var x = 1; x <= q - 1; x++) {
+        for (var y = 2; y <= q; y++) {
             if (x < y) {
-                if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)){
+                if ((x >= clicked_x && y >= clicked_y) || (x <= clicked_x && y <= clicked_y)) {
                     order_map.set(`${x.toString()},${y.toString()}`, 1);
                 } else {
                     order_map.set(`${x.toString()},${y.toString()}`, 0.2);
@@ -645,43 +644,23 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
             }
         }
     }
-    
-    
+
     // Closure Order - Above the Equator
-    for (var x = q-1; x >= 1; x--){
-        for (var y = 2; y <= q; y++){
-            if (order_map.get(`${x.toString()},${y.toString()}`) == 1 && (q >= 5 && y == q - x + 2 && x >= 4 && x < q / 2 + 1)) {
-                order_map.set(`${(x-1).toString()},${(y+2).toString()}`, 1);
-                for (var x_temp = x-1; x_temp < y+2; x_temp++){
-                    order_map.set(`${(x_temp).toString()},${(y+2).toString()}`, 1);
-                }
-            }
-            if (order_map.get(`${x.toString()},${y.toString()}`) == 1 && (q >= 7 && x >= 4 && x < q / 2 && y >= 4 + q - x && y <= q)) {
-                order_map.set(`${(x-1).toString()},${(y+2).toString()}`, 1);
-                for (var x_temp = x-1; x_temp < y+2; x_temp++){
-                    order_map.set(`${(x_temp).toString()},${(y+2).toString()}`, 1);
-                }
+    for (var x = Math.ceil(q/2); x >= 2; x--) {
+        for (var y = q + 2 - Math.ceil(q/2); y <= q; y++) {
+            if (order_map.get(`${x},${y}`) && (x + y) >= q + 2){
+                // STOPPED HERE
             }
         }
     }
+    /*
     // Closure Order - Below the Equator
-    for (var x = q-1; x >= 1; x--){
-        for (var y = 2; y <= q; y++){
-            if (order_map.get(`${x.toString()},${y.toString()}`) == 1 && (q >= 5 && x == q - y + 1 && y > q / 2 + 2 && y <= q)) {
-                order_map.set(`${(x-2).toString()},${(y+1).toString()}`, 1);
-                for (var y_temp = y+1; y_temp > x; y_temp--){
-                    order_map.set(`${(x-2).toString()},${(y_temp).toString()}`, 1);
-                }
-            }
-            if (order_map.get(`${x.toString()},${y.toString()}`) == 1 && (q >= 7 && x >= 3 && x < q / 2 && y > q / 2 + 1 && y <= q - x + 2)) {
-                order_map.set(`${(x-2).toString()},${(y+1).toString()}`, 1);
-                for (var y_temp = y+1; y_temp > x; y_temp--){
-                    order_map.set(`${(x_temp).toString()},${(y+1).toString()}`, 1);
-                }
-            }
+    for (var x = q - 1; x >= 1; x--) {
+        for (var y = 2; y <= q; y++) {
+           
         }
-    }
-    
+    }*/
+
 
     // ABOVE THE EQUATOR ----------------------------------------------
     for (var y = q; y > Math.floor((q + 2) / 2); y--) {
@@ -746,7 +725,8 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 })
                 .attr("opacity", opacity);
 
-                // Closure Order Next
+            // Closure Order Next
+            /*
             if (opacity == 1 && q >= 5 && y == q - x + 2 && x >= 4 && x < q / 2 + 1) {
                 svg.append("line")
                     .attr("x1", cx - (2) * sep_val + radius)
@@ -757,18 +737,17 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
             }
-
+            
             if (opacity == 1 && q >= 7 && x >= 4 && x < q / 2 && y >= 4 + q - x && y <= q) {
                 svg.append("line")
                     .attr("x1", cx + radius)
-                    //.attr("x1", cx - 2 * sep_val + radius)
                     .attr("x2", cx + 2 * sep_val - radius)
                     .attr("y1", cy + radius - 5)
                     .attr("y2", cy + sep_val - radius + 5)
                     .attr("stroke", "orange")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
-            }
+            }*/
         }
     } // END ABOVE THE EQUATOR ----------------------------------------------
 
