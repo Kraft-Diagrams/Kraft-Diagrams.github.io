@@ -647,7 +647,7 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
 
     
     // Closure Order - Above the Equator
-    for (var x = 2; x < Math.ceil((q+1)/2); x++) {
+    for (var x = 2; x <= Math.ceil(q/2); x++) {
         for (var y = Math.ceil((q+2)/2); y <= q - 2; y++) {
             if (order_map.get(`${x},${y}`) == 1 && (x+y) >= q+2 && x >= clicked_x && y >= clicked_y){
                 var jump = 1;
@@ -700,6 +700,12 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 for (var temp_y = y+1; temp_y > x-2; temp_y--){
                     order_map.set(`${(x-2).toString()},${temp_y.toString()}`, 1);
                 }
+            }
+        }
+        if (x >= 4 && order_map.get(`${x-1},${y+2}`) == 1 && clicked_x + clicked_y > q+2){
+            order_map.set(`${x.toString()},${temp_y.toString()}`, 1);
+            for (var temp_y = y; temp_y > x; temp_y--){
+                order_map.set(`${x.toString()},${temp_y.toString()}`, 1);
             }
         }
     }
