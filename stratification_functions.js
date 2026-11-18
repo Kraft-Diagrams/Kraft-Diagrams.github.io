@@ -741,6 +741,13 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
 
             }
         }
+
+        if (order_map.get(`${x-2},${y+1}`) == 1 && clicked_x + clicked_y < q+2){
+            for (var temp_x = x; temp_x < y; temp_x++){
+                order_map.set(`${temp_x.toString()},${y.toString()}`, 1);
+
+            }
+        }
     }
 
 
