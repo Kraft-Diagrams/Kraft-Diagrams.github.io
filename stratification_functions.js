@@ -645,21 +645,103 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
         }
     }
 
+    
     // Closure Order - Above the Equator
-    for (var x = Math.ceil(q/2); x >= 2; x--) {
-        for (var y = q + 2 - Math.ceil(q/2); y <= q; y++) {
-            if (order_map.get(`${x},${y}`) && (x + y) >= q + 2){
-                // STOPPED HERE
+    for (var x = 2; x < Math.ceil((q+1)/2); x++) {
+        for (var y = Math.ceil((q+2)/2); y <= q - 2; y++) {
+            if (order_map.get(`${x},${y}`) == 1 && (x+y) >= q+2 && x >= clicked_x && y >= clicked_y){
+                var jump = 1;
+                while (y + 2*jump <= q){
+                    order_map.set(`${(x-jump).toString()},${y+2*jump.toString()}`, 1);
+                    jump++;
+                }
+            }
+            if (order_map.get(`${x},${y}`) == 1 && (x+y) > q+2 && x <= clicked_x && y <= clicked_y){  
+                var jump = 1;
+                while (y-2*jump >= Math.ceil(q/2)+2 && (y-2*jump + x + jump) >= q+2 && x+jump < Math.ceil((q+1)/2)){
+                    order_map.set(`${(x+jump).toString()},${(y-2*jump).toString()}`, 1);
+                    jump++;
+                }
             }
         }
     }
+
+    // Closure Order - The Equator
     /*
-    // Closure Order - Below the Equator
-    for (var x = q - 1; x >= 1; x--) {
-        for (var y = 2; y <= q; y++) {
-           
+    for (var x = 2; x <= Math.ceil(q/2); x++){
+        var y = q + 2 - x;
+        if (order_map.get(`${x},${y}`) == 1){
+            for (var temp_y = y; temp_y > x && x >= clicked_x; temp_y--){
+                order_map.set(`${x.toString()},${temp_y.toString()}`, 1);
+            }
+
+            for (temp_y = y; temp_y >= clicked_y; temp_y--){
+                order_map.set(`${x.toString()},${temp_y.toString()}`, 1);
+            }
+            if (x-2 >= 1 && y + 1 <= q && x-2 >= clicked_x && y+1 >= clicked_y && x >= clicked_x && y >= clicked_y){
+                order_map.set(`${(x-2).toString()},${(y+1).toString()}`, 1);
+            }
+            if (x == clicked_x && y == clicked_y && x-2 >= 1 && y + 1 <= q){
+                order_map.set(`${(x-2).toString()},${(y+1).toString()}`, 1);
+            }
         }
-    }*/
+    }
+    */
+
+    // Closure Order - The Equator
+    for (var x = 2; x <= Math.ceil(q/2); x++){
+        var y = q + 2 - x;
+        if (order_map.get(`${x},${y}`) == 1 && clicked_x + clicked_y >= q+2){
+            for (var temp_y = y; temp_y > x; temp_y--){
+                order_map.set(`${x.toString()},${temp_y.toString()}`, 1);
+            }
+            if (x > 2){
+                order_map.set(`${(x-2).toString()},${(y+1).toString()}`, 1);
+                for (var temp_y = y+1; temp_y > x-2; temp_y--){
+                    order_map.set(`${(x-2).toString()},${temp_y.toString()}`, 1);
+                }
+            }
+        }
+    }
+    
+    // Closure Order - Below the Equator
+    for (var x = 1; x <= Math.floor((q+1)/2); x++) {
+        for (var y = 2; y <= q; y++) {
+            if (order_map.get(`${x},${y}`) == 1 && x <= clicked_x && y <= clicked_y && (x+y) < q+2 && y > Math.floor(q/2) + 1){
+                var jump = 1;
+                while (x - 2*jump >= 1){
+                    order_map.set(`${(x-2*jump).toString()},${(y+jump).toString()}`, 1);
+                    jump++;
+                }
+            }
+            if (order_map.get(`${x},${y}`) == 1 && x >= clicked_x && y >= clicked_y && (x+y) <= q+2){
+                var jump = 1;
+                while (x+2*jump < Math.floor((q+1)/2) && (x+2*jump + y-jump) <= q+2 && y-jump > Math.floor(q/2) + 1){
+                    order_map.set(`${(x+2*jump).toString()},${(y-jump).toString()}`, 1);
+                    jump++;
+                }
+            }
+
+        }
+    }
+
+    // Closure Order - The Equator Pt2
+    for (var x = 2; x <= Math.ceil(q/2); x++){
+        var y = q + 2 - x;
+        //if (order_map.get(`${x},${y}`) == 1 && ((x >= clicked_x && y >= clicked_y) || ((x - clicked_x) == (clicked_y-y)*2))){
+        if (order_map.get(`${x},${y}`) == 1 && clicked_x + clicked_y < q+2){
+            for (var temp_x = x; temp_x < y; temp_x++){
+                order_map.set(`${temp_x.toString()},${y.toString()}`, 1);
+
+            }
+        }
+        if (order_map.get(`${x-1},${y}`) == 1 && clicked_x + clicked_y < q+2){
+            for (var temp_x = x; temp_x < y; temp_x++){
+                order_map.set(`${temp_x.toString()},${y.toString()}`, 1);
+
+            }
+        }
+    }
 
 
     // ABOVE THE EQUATOR ----------------------------------------------
@@ -725,29 +807,51 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 })
                 .attr("opacity", opacity);
 
-            // Closure Order Next
-            /*
-            if (opacity == 1 && q >= 5 && y == q - x + 2 && x >= 4 && x < q / 2 + 1) {
+            // Bruhat
+            if (opacity == 1 && x+1 <= y-1 && order_map.get(`${(x+1).toString()},${(y).toString()}`) == 1){
                 svg.append("line")
-                    .attr("x1", cx - (2) * sep_val + radius)
+                    .attr("x1", cx)
+                    .attr("x2", cx)
+                    .attr("y1", cy - sep_val + radius + 5)
+                    .attr("y2", cy - radius - 5)
+                    .attr("stroke", "gray")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowB)");
+            }
+
+            if (opacity == 1 &&  y < q && order_map.get(`${(x).toString()},${(y+1).toString()}`) == 1){
+                svg.append("line")
+                    .attr("x1", cx - sep_val + radius)
                     .attr("x2", cx - radius)
-                    .attr("y1", cy - sep_val + radius - 5)
-                    .attr("y2", cy - radius + 5)
+                    .attr("y1", cy - sep_val + radius)
+                    .attr("y2", cy - radius)
+                    .attr("stroke", "gray")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowB)");
+            }
+
+            // Closure
+            if (opacity == 1 &&  y + 2 <= q && order_map.get(`${(x-1).toString()},${(y+2).toString()}`) == 1 && x - 1 < Math.ceil(q/2)){
+                svg.append("line")
+                    .attr("x1", cx - 2 * sep_val + radius)
+                    .attr("x2", cx - radius)
+                    .attr("y1", cy - sep_val + radius)
+                    .attr("y2", cy - radius)
                     .attr("stroke", "orange")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
             }
-            
-            if (opacity == 1 && q >= 7 && x >= 4 && x < q / 2 && y >= 4 + q - x && y <= q) {
+
+            if (opacity == 1 && x+y == q+2 && x-2 >= 1 && order_map.get(`${(x-2).toString()},${(y+1).toString()}`) == 1){
                 svg.append("line")
-                    .attr("x1", cx + radius)
-                    .attr("x2", cx + 2 * sep_val - radius)
-                    .attr("y1", cy + radius - 5)
-                    .attr("y2", cy + sep_val - radius + 5)
+                    .attr("x1", cx - radius)
+                    .attr("x2", cx - 2*sep_val + radius)
+                    .attr("y1", cy + radius)
+                    .attr("y2", cy + sep_val - radius)
                     .attr("stroke", "orange")
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowC)");
-            }*/
+            }
         }
     } // END ABOVE THE EQUATOR ----------------------------------------------
 
@@ -812,21 +916,33 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                 })
                 .attr("opacity", opacity);
 
-            //  CLosure Order Next
-            if (opacity == 1 && q >= 5 && x == q - y + 1 && y > q / 2 + 2 && y <= q) {
+            if (opacity == 1 && y < q && order_map.get(`${x},${y+1}`) == 1){
                 svg.append("line")
-                    .attr("x1", cx + 2 * sep_val - radius)
-                    .attr("x2", cx + radius)
-                    .attr("y1", cy - sep_val + radius - 5)
-                    .attr("y2", cy - radius + 5)
-                    .attr("stroke", "orange")
+                    .attr("x1", cx)
+                    .attr("x2", cx)
+                    .attr("y1", cy - sep_val + radius + 5)
+                    .attr("y2", cy - radius - 5)
+                    .attr("stroke", "gray")
                     .attr("stroke-width", 2)
-                    .attr("marker-end", "url(#arrowC)");
+                    .attr("marker-end", "url(#arrowB)");
             }
-            if (opacity == 1 && q >= 7 && x >= 3 && x < q / 2 && y > q / 2 + 1 && y <= q - x + 2) {
+
+            if (opacity == 1 && x+1 < y && order_map.get(`${x+1},${y}`) == 1){
+                svg.append("line")
+                    .attr("x1", cx + sep_val - radius)
+                    .attr("x2", cx + radius)
+                    .attr("y1", cy - sep_val + radius)
+                    .attr("y2", cy - radius)
+                    .attr("stroke", "gray")
+                    .attr("stroke-width", 2)
+                    .attr("marker-end", "url(#arrowB)");
+            }
+
+            // Closure order
+            if (opacity == 1 &&  y >= Math.floor(q/2) + 2 && order_map.get(`${(x-2).toString()},${(y+1).toString()}`) == 1 && x - 2 >= 1){
                 svg.append("line")
                     .attr("x1", cx - radius)
-                    .attr("x2", cx - 2 * sep_val + radius)
+                    .attr("x2", cx - 2*sep_val + radius)
                     .attr("y1", cy + radius)
                     .attr("y2", cy + sep_val - radius)
                     .attr("stroke", "orange")
