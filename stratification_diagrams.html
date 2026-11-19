@@ -28,11 +28,12 @@
             font-size: 0.75vw;
         }
 
-        .container > div {
+        .container div {
             flex: 1; /*grow*/
             justify-content: center;
             align-items: center;
             text-align: center;
+            width: 50%;
         }
 
         div {
@@ -83,7 +84,10 @@
         <input type="number" id="q" name="q" min="2" max="20" onchange="draw_stratification_diagram()">
         </p>
 
+        <div class="container">
         <div id="draw_diagram" style="vertical-align: top;"></div> 
+        <div id="orderings" style="vertical-align: top;"></div>
+        <div>
 
     </body>
 </html>

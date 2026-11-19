@@ -17,6 +17,8 @@ async function draw_stratification_diagram() {
 
     var div = document.getElementById("draw_diagram");
     div.innerHTML = "";
+    var order_table = document.getElementById("orderings");
+    order_table.innerHTML = "";
 
     // Get the data we'll be filtering
     var strata = await getData();
@@ -607,7 +609,7 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
         .attr("font-size", "24px")
         .style("dominant-baseline", "center")
         .style("fill", "black")
-        .text(`Ordering for Strata (${clicked_x}, ${clicked_y})`);
+        .text(`Ordering for Stratum (${clicked_x}, ${clicked_y})`);
     // END TITLE ----------------------------------------------
 
     // Indicate which node has been clicked
@@ -644,7 +646,6 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
             }
         }
     }
-
     
     // Closure Order - Above the Equator
     for (var x = 2; x <= Math.ceil(q/2); x++) {
@@ -665,28 +666,6 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
             }
         }
     }
-
-    // Closure Order - The Equator
-    /*
-    for (var x = 2; x <= Math.ceil(q/2); x++){
-        var y = q + 2 - x;
-        if (order_map.get(`${x},${y}`) == 1){
-            for (var temp_y = y; temp_y > x && x >= clicked_x; temp_y--){
-                order_map.set(`${x.toString()},${temp_y.toString()}`, 1);
-            }
-
-            for (temp_y = y; temp_y >= clicked_y; temp_y--){
-                order_map.set(`${x.toString()},${temp_y.toString()}`, 1);
-            }
-            if (x-2 >= 1 && y + 1 <= q && x-2 >= clicked_x && y+1 >= clicked_y && x >= clicked_x && y >= clicked_y){
-                order_map.set(`${(x-2).toString()},${(y+1).toString()}`, 1);
-            }
-            if (x == clicked_x && y == clicked_y && x-2 >= 1 && y + 1 <= q){
-                order_map.set(`${(x-2).toString()},${(y+1).toString()}`, 1);
-            }
-        }
-    }
-    */
 
     // Closure Order - The Equator
     for (var x = 2; x <= Math.ceil(q/2); x++){
@@ -755,7 +734,6 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
             }
         }
     }
-
 
     // ABOVE THE EQUATOR ----------------------------------------------
     for (var y = q; y > Math.floor((q + 2) / 2); y--) {
@@ -965,6 +943,67 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
         }
     }
     // END BELOW THE EQUATOR ----------------------------------------------
+
+    // Make the tables for above/below related
+    var order_table = document.getElementById("orderings");
+    order_table.innerHTML = `
+    <table id="order-table-bruhat">
+        <tr>
+            <th colspan="2">Associated Nodes Via Bruhat Ordering</th>
+        </tr>
+        <tr>
+            <td>Above (${clicked_x}, ${clicked_y})</td>
+            <td>Below (${clicked_x}, ${clicked_y})</td>
+        </tr>
+        <tr>
+            <td><ul id="above-bruhat"></ul></td>
+            <td><ul id="below-bruhat"></ul></td>
+        </tr>
+    </table>
+    <br><br>
+    <table id = "order-table-closure">
+        <tr>
+            <th colspan="2">Additional Nodes Associated Via Closure Ordering</th>
+        </tr>
+        <tr>
+            <td>Above (${clicked_x}, ${clicked_y})</td>
+            <td>Below (${clicked_x}, ${clicked_y})</td>
+        </tr>
+        <tr>
+            <td><ul id="above-closure"></ul></td>
+            <td><ul id="below-closure"></ul></td>
+        </tr>
+    </table>`;
+
+    var aboveB = document.getElementById("above-bruhat");
+    var belowB = document.getElementById("below-bruhat");
+    var aboveC = document.getElementById("above-closure");
+    var belowC = document.getElementById("below-closure");
+
+    for (var x = 1; x <= q-1; x++){
+        for (var y = 2; y <= q; y++){
+            if (x < y && order_map.get(`${x},${y}`) == 1){
+                const node = document.createElement("li");
+                const text = document.createTextNode(`(${x}, ${y})`);
+                node.appendChild(text);
+
+                if (x >= clicked_x && y >= clicked_y && (x != clicked_x || y != clicked_y)){
+                    aboveB.appendChild(node);
+                } else if (x <= clicked_x && y <= clicked_y && (x != clicked_x || y != clicked_y)){
+                    belowB.appendChild(node);
+                } /*else if (clicked_x+clicked_y < q+2 && x > clicked_x){
+                    aboveC.appendChild(node);
+                } else if (clicked_x+clicked_y < q+2 && x < clicked_x){
+                    belowC.appendChild(node);
+                } else if (clicked_x + clicked_y >= q+2 && ((x > clicked_x && y < clicked_y) || (x < clicked_x && y > clicked_y)) ) {
+                    belowC.appendChild(node);
+                } else {
+                    console.log(x, y);
+                }*/
+
+            }
+        }
+    }
 
 }
 
