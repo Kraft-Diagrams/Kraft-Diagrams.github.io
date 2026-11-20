@@ -167,82 +167,38 @@ async function filter_data() {
 
     for (s of filtered_strata) {
         var strata_id = "strata-".concat(s.q.toString().concat('__', s.Strata.toString().split(',').join('_')));
-        if (draw_diagrams && draw_matrices) {
+
+        let new_row = `
+                    <tr>
+                        <td>${s.q.toString()}</td>
+                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
+                        <td>${s.Strata.toString().split(',').join(', ')}</td>
+                        <td>${s.StratumDim.toString()}</td>
+                        <td>${s.Words.join(', ')}</td>
+                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
+                        <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
+                        <td>[${s.TL_Slope.toString()}]</td>
+                        <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
+                        <td>${s.SS_Locus_Interaction}</td>`;
+        
+        if (draw_matrices){
             let F_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(s.q))}|}${s.F_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
             let V_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(s.q))}|}${s.V_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
-
-            let new_row = `
-                    <tr>
-                        <td>${s.q.toString()}</td>
-                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
-                        <td>${s.Strata.toString().split(',').join(', ')}</td>
-                        <td>${s.StratumDim.toString()}</td>
-                        <td>${s.Words.join(', ')}</td>
-                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                        <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
-                        <td>[${s.TL_Slope.toString()}]</td>
-                        <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
-                        <td>${s.SS_Locus_Interaction}</td>
+            new_row += `
                         <td>${F_matrix}</td>
                         <td>${V_matrix}</td>
-                        <td><div id="${strata_id}"></div></td>
-                    </tr>`;
-            table_body.insertAdjacentHTML("beforeend", new_row);
-            MathJax.typeset();
-            draw_kraft_diagram(strata_id);
-        } else if (draw_matrices){
-            let F_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(s.q))}|}${s.F_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
-            let V_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(s.q))}|}${s.V_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
+                    `;
+        }
+        if (draw_diagrams) {
+            new_row += `<td><div id="${strata_id}"></div></td>`;
+        } 
 
-            let new_row = String.raw`
-                    <tr>
-                        <td>${s.q.toString()}</td>
-                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
-                        <td>${s.Strata.toString().split(',').join(', ')}</td>
-                        <td>${s.StratumDim.toString()}</td>
-                        <td>${s.Words.join(', ')}</td>
-                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                        <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
-                        <td>[${s.TL_Slope.toString()}]</td>
-                        <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
-                        <td>${s.SS_Locus_Interaction}</td>
-                        <td>${F_matrix}</td>
-                        <td>${V_matrix}</td>
-                    </tr>`;
-            table_body.insertAdjacentHTML("beforeend", new_row);
-            MathJax.typeset();
-        } else if (draw_diagrams) {
-            let new_row = `
-                    <tr>
-                        <td>${s.q.toString()}</td>
-                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
-                        <td>${s.Strata.toString().split(',').join(', ')}</td>
-                        <td>${s.StratumDim.toString()}</td>
-                        <td>${s.Words.join(', ')}</td>
-                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                        <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
-                        <td>[${s.TL_Slope.toString()}]</td>
-                        <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
-                        <td>${s.SS_Locus_Interaction}</td>
-                        <td><div id="${strata_id}"></div></td>
-                    </tr>`;
-            table_body.insertAdjacentHTML("beforeend", new_row);
+        new_row += `</tr>`;
+        table_body.insertAdjacentHTML("beforeend", new_row);
+        MathJax.typeset();
+
+        if (draw_diagrams){
             draw_kraft_diagram(strata_id);
-        } else {
-            let new_row = `
-                    <tr>
-                        <td>${s.q.toString()}</td>
-                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
-                        <td>${s.Strata.toString().split(',').join(', ')}</td>
-                        <td>${s.StratumDim.toString()}</td>
-                        <td>${s.Words.join(', ')}</td>
-                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                        <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
-                        <td>[${s.TL_Slope.toString()}]</td>
-                        <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
-                        <td>${s.SS_Locus_Interaction}</td>
-                    </tr>`;
-            table_body.insertAdjacentHTML("beforeend", new_row);
         }
     }
 }
