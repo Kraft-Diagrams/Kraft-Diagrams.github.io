@@ -58,11 +58,8 @@
     <head>
         <h1>Kraft Diagram Database</h1>
         <h2>*** Note: Database is incomplete for all q>10, only signatures (q-2, 2) are available ***</h2>
-        <script src="https://d3js.org/d3.v7.min.js"></script>
     </head>
     <body>
-        <!-- IMPORT JAVASCRIPT-->
-        <script src="database_functions.js"></script>
 
         <a href="stratification_diagrams.html">Check out the Stratification Diagram Page!</a>
 
@@ -148,33 +145,25 @@
         <input type="checkbox" id="display_diagrams" onchange="filter_data()">
         </p>
 
+        <p>
+        Display Adjacency Matrices:
+        <input type="checkbox" id="display_matrices" onchange="filter_data()">
+        </p>
+
         <p><input type="reset" onclick="filter_data()"/></p>
         </form>
 
         <!-- Create a table to store all of the strata information -->
         <table id="strata">
             <thead id="strata-head">
-            <tr>
-                <th>Dimension q</th>
-                <th>Signature</th>
-                <th>Indices of Gamma</th>
-                <th>Stratum Dimension</th>
-                <th>Word(s)</th>
-                <th>Elementary Sequence</th>
-                <th>Harashita Slope</th>
-                <th>TL Slope</th>
-                <th>Indecomposable</th>
-                <th>SS Locus</th>
-                <th>Kraft Diagram (On Toggle)</th>
-            </tr>
             </thead>
             <tbody id="strata-body">
             </tbody>
         </table>
 
-        <div id="plot_graph">
-            
-        </div>
-
+        <!-- IMPORT JAVASCRIPT-->
+        <script src="database_functions.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     </body>
 </html>

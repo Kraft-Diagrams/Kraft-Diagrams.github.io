@@ -598,9 +598,34 @@ def SSLocus_Interaction(TL_Slopes, HS_Slope):
 def stratum_dimension(strata, b):
     return sum(strata) - (b*(b+1))//2
 
+def build_adjacency_matrices(diagram):
+    q = len(diagram)//2
+    # Create empty adjacency matrices - one for V connections, one for F connections
+    F_matrix = [["0" for i in range(2*q)] for j in range(2*q)]
+    V_matrix = [["0" for i in range(2*q)] for j in range(2*q)]
+    
+    for key, val in diagram.items():
+        if val[1] == "V":
+            source = (val[0][0]-1)*q + val[0][1] - 1
+            target = (key[0]-1)*q + key[1] - 1
+            
+            V_matrix[source][target] = "1"
+        else:
+            target = (val[0][0]-1)*q + val[0][1] - 1
+            source = (key[0]-1)*q + key[1] - 1
+            
+            F_matrix[source][target] = "1"
+            
+    F_matrix = ";".join([",".join(row) for row in F_matrix])
+    V_matrix = ";".join([",".join(row) for row in V_matrix])
+    
+    return F_matrix, V_matrix
+    
+
+
 if __name__ == "__main__":
     
-    all_strata = {"q":[], "Signature":[], "Strata":[], "StratumDim":[], "Words":[], "EO_Type":[], "Harashita_Slope": [], "TL_Slope": [], "Indecomposable": [], "SS_Locus_Interaction":[], "Graph": []}
+    all_strata = {"q":[], "Signature":[], "Strata":[], "StratumDim":[], "Words":[], "EO_Type":[], "Harashita_Slope": [], "TL_Slope": [], "Indecomposable": [], "SS_Locus_Interaction":[], "Graph": [], "F_Matrix":[], "V_Matrix":[]}
     
     max_q = 10
     for q in range(1, max_q+1):
@@ -615,6 +640,7 @@ if __name__ == "__main__":
                 decomposible = is_decomposable(q, words)
                 SS_locus = SSLocus_Interaction(TL_slopes, HS_slope)
                 strata_dim = stratum_dimension(strata, b)
+                F_matrix, V_matrix = build_adjacency_matrices(diagram)
                 
                 # Add info to dataframe
                 all_strata["q"].append(q)
@@ -628,6 +654,8 @@ if __name__ == "__main__":
                 all_strata["Indecomposable"].append(not decomposible)
                 all_strata["SS_Locus_Interaction"].append(SS_locus)
                 all_strata["Graph"].append(d3_diagram(diagram))
+                all_strata["F_Matrix"].append(F_matrix)
+                all_strata["V_Matrix"].append(V_matrix)
         print(q)
         
     for q in range(max_q+1, 21):
@@ -642,6 +670,7 @@ if __name__ == "__main__":
                 decomposible = is_decomposable(q, words)
                 SS_locus = SSLocus_Interaction(TL_slopes, HS_slope)
                 strata_dim = stratum_dimension(strata, b)
+                F_matrix, V_matrix = build_adjacency_matrices(diagram)
                 
                 # Add info to dataframe
                 all_strata["q"].append(q)
@@ -655,9 +684,12 @@ if __name__ == "__main__":
                 all_strata["Indecomposable"].append(not decomposible)
                 all_strata["SS_Locus_Interaction"].append(SS_locus)
                 all_strata["Graph"].append(d3_diagram(diagram))
+                all_strata["F_Matrix"].append(F_matrix)
+                all_strata["V_Matrix"].append(V_matrix)
         print(q)
     
     all_strata = pd.DataFrame(all_strata)
     #all_strata.to_csv("All_Strata.csv", index=False)
     all_strata.to_json("All_Strata.json", orient="records", indent=3)
+    
 

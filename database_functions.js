@@ -93,8 +93,40 @@ async function filter_data() {
     });
 
     var draw_diagrams = document.getElementById("display_diagrams").checked;
+    var draw_matrices = document.getElementById("display_matrices").checked;
 
-    if (draw_diagrams){
+    if (draw_diagrams && draw_matrices){
+        var head_row = `<tr>
+                <th>Dimension q</th>
+                <th>Signature</th>
+                <th>Indices of Gamma</th>
+                <th>Stratum Dimension</th>
+                <th>Word(s)</th>
+                <th>Elementary Sequence</th>
+                <th>Harashita Slope</th>
+                <th>TL Slope</th>
+                <th>Indecomposable</th>
+                <th>SS Locus</th>
+                <th>F Matrix</th>
+                <th>V Matrix</th>
+                <th>Kraft Diagram</th>
+            </tr>`;
+    } else if (draw_matrices){
+        var head_row = `<tr>
+                <th>Dimension q</th>
+                <th>Signature</th>
+                <th>Indices of Gamma</th>
+                <th>Stratum Dimension</th>
+                <th>Word(s)</th>
+                <th>Elementary Sequence</th>
+                <th>Harashita Slope</th>
+                <th>TL Slope</th>
+                <th>Indecomposable</th>
+                <th>SS Locus</th>
+                <th>F Matrix</th>
+                <th>V Matrix</th>
+            </tr>`;
+    } else if (draw_diagrams) {
         var head_row = `<tr>
                 <th>Dimension q</th>
                 <th>Signature</th>
@@ -135,7 +167,51 @@ async function filter_data() {
 
     for (s of filtered_strata) {
         var strata_id = "strata-".concat(s.q.toString().concat('__', s.Strata.toString().split(',').join('_')));
-        if (draw_diagrams) {
+        if (draw_diagrams && draw_matrices) {
+            let F_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(s.q))}|}${s.F_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
+            let V_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(s.q))}|}${s.V_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
+
+            let new_row = `
+                    <tr>
+                        <td>${s.q.toString()}</td>
+                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
+                        <td>${s.Strata.toString().split(',').join(', ')}</td>
+                        <td>${s.StratumDim.toString()}</td>
+                        <td>${s.Words.join(', ')}</td>
+                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
+                        <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
+                        <td>[${s.TL_Slope.toString()}]</td>
+                        <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
+                        <td>${s.SS_Locus_Interaction}</td>
+                        <td>${F_matrix}</td>
+                        <td>${V_matrix}</td>
+                        <td><div id="${strata_id}"></div></td>
+                    </tr>`;
+            table_body.insertAdjacentHTML("beforeend", new_row);
+            MathJax.typeset();
+            draw_kraft_diagram(strata_id);
+        } else if (draw_matrices){
+            let F_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(s.q))}|}${s.F_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
+            let V_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(s.q))}|}${s.V_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
+
+            let new_row = String.raw`
+                    <tr>
+                        <td>${s.q.toString()}</td>
+                        <td>(${s.Signature.toString().split(',').join(', ')})</td>
+                        <td>${s.Strata.toString().split(',').join(', ')}</td>
+                        <td>${s.StratumDim.toString()}</td>
+                        <td>${s.Words.join(', ')}</td>
+                        <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
+                        <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
+                        <td>[${s.TL_Slope.toString()}]</td>
+                        <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
+                        <td>${s.SS_Locus_Interaction}</td>
+                        <td>${F_matrix}</td>
+                        <td>${V_matrix}</td>
+                    </tr>`;
+            table_body.insertAdjacentHTML("beforeend", new_row);
+            MathJax.typeset();
+        } else if (draw_diagrams) {
             let new_row = `
                     <tr>
                         <td>${s.q.toString()}</td>
