@@ -991,15 +991,11 @@ async function draw_partial_diagram(clicked_x, clicked_y) {
                     aboveB.appendChild(node);
                 } else if (x <= clicked_x && y <= clicked_y && (x != clicked_x || y != clicked_y)){
                     belowB.appendChild(node);
-                } /*else if (clicked_x+clicked_y < q+2 && x > clicked_x){
+                } else if (x + y > clicked_x + clicked_y){
                     aboveC.appendChild(node);
-                } else if (clicked_x+clicked_y < q+2 && x < clicked_x){
+                } else if (x + y < clicked_x + clicked_y){
                     belowC.appendChild(node);
-                } else if (clicked_x + clicked_y >= q+2 && ((x > clicked_x && y < clicked_y) || (x < clicked_x && y > clicked_y)) ) {
-                    belowC.appendChild(node);
-                } else {
-                    console.log(x, y);
-                }*/
+                }
 
             }
         }
