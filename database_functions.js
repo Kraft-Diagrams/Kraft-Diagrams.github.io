@@ -167,6 +167,9 @@ async function filter_data() {
 
     for (s of filtered_strata) {
         var strata_id = "strata-".concat(s.q.toString().concat('__', s.Strata.toString().split(',').join('_')));
+        var TL = s.TL_Slope.toString().split(", ").join(String.raw`,\frac{`).split(`/`).join('}{').split(`^`).join(`}^`);
+        TL = String.raw`\(\frac{${TL}\)`;
+        console.log(TL);
 
         let new_row = `
                     <tr>
@@ -177,7 +180,7 @@ async function filter_data() {
                         <td>${s.Words.join(', ')}</td>
                         <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
                         <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
-                        <td>[${s.TL_Slope.toString()}]</td>
+                        <td>[${TL}]</td>
                         <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
                         <td>${s.SS_Locus_Interaction}</td>`;
         
