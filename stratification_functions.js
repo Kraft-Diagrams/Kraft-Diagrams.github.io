@@ -8,6 +8,9 @@ async function getData() {
 
 async function draw_stratification_diagram() {
 
+    var add_button = document.getElementById("add-reset-button");
+    add_button.innerHTML  = "";
+
     var q = Number(document.getElementById("q").value);
 
     if (q > 20 || q < 2) {
@@ -387,7 +390,7 @@ async function draw_stratification_diagram() {
                     .attr("stroke-width", 2)
                     .attr("marker-end", "url(#arrowB)");
             }
-            // ClosureOrder Next
+            // Closure Order Next
             if (q >= 5 && x == q - y + 1 && y > q / 2 + 2 && y <= q) {
                 svg.append("line")
                     .attr("x1", cx + 2 * sep_val - radius)
@@ -414,6 +417,9 @@ async function draw_stratification_diagram() {
 }
 
 async function draw_partial_diagram(clicked_x, clicked_y) {
+
+    var add_button = document.getElementById("add-reset-button");
+    add_button.innerHTML += `<button onClick="draw_stratification_diagram()">Reset Diagram</button>`
 
     // clicked_x and clicked_y should be the signature clicked.
 
