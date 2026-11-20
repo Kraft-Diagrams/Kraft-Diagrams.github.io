@@ -95,65 +95,28 @@ async function filter_data() {
     var draw_diagrams = document.getElementById("display_diagrams").checked;
     var draw_matrices = document.getElementById("display_matrices").checked;
 
-    if (draw_diagrams && draw_matrices){
-        var head_row = `<tr>
+    var head_row = String.raw`<tr>
                 <th>Dimension q</th>
                 <th>Signature</th>
-                <th>Indices of Gamma</th>
+                <th>\(\gamma\) Indices</th>
                 <th>Stratum Dimension</th>
                 <th>Word(s)</th>
                 <th>Elementary Sequence</th>
                 <th>Harashita Slope</th>
                 <th>TL Slope</th>
                 <th>Indecomposable</th>
-                <th>SS Locus</th>
+                <th>SS Locus</th>`;
+
+    if (draw_matrices){
+        head_row += `
                 <th>F Matrix</th>
                 <th>V Matrix</th>
-                <th>Kraft Diagram</th>
-            </tr>`;
-    } else if (draw_matrices){
-        var head_row = `<tr>
-                <th>Dimension q</th>
-                <th>Signature</th>
-                <th>Indices of Gamma</th>
-                <th>Stratum Dimension</th>
-                <th>Word(s)</th>
-                <th>Elementary Sequence</th>
-                <th>Harashita Slope</th>
-                <th>TL Slope</th>
-                <th>Indecomposable</th>
-                <th>SS Locus</th>
-                <th>F Matrix</th>
-                <th>V Matrix</th>
-            </tr>`;
-    } else if (draw_diagrams) {
-        var head_row = `<tr>
-                <th>Dimension q</th>
-                <th>Signature</th>
-                <th>Indices of Gamma</th>
-                <th>Stratum Dimension</th>
-                <th>Word(s)</th>
-                <th>Elementary Sequence</th>
-                <th>Harashita Slope</th>
-                <th>TL Slope</th>
-                <th>Indecomposable</th>
-                <th>SS Locus</th>
-                <th>Kraft Diagram</th>
-            </tr>`;
-    } else {
-        var head_row = `<tr>
-                <th>Dimension q</th>
-                <th>Signature</th>
-                <th>Indices of Gamma</th>
-                <th>Stratum Dimension</th>
-                <th>Word(s)</th>
-                <th>Elementary Sequence</th>
-                <th>Harashita Slope</th>
-                <th>TL Slope</th>
-                <th>Indecomposable</th>
-                <th>SS Locus</th>
-            </tr>`;
+                `;
     }
+    if (draw_diagrams){
+        head_row += `<th>Kraft Diagram</th>`;
+    } 
+    head_row += `</tr>`
     table_head.insertAdjacentHTML("beforeend", head_row);
 
     // Filter based on the strata's interaction with the SS Locus
@@ -167,11 +130,10 @@ async function filter_data() {
 
     for (s of filtered_strata) {
         var strata_id = "strata-".concat(s.q.toString().concat('__', s.Strata.toString().split(',').join('_')));
-        var TL = s.TL_Slope.toString().split(", ").join(String.raw`,\frac{`).split(`/`).join('}{').split(`^`).join(`}^`);
-        TL = String.raw`\(\frac{${TL}\)`;
-        console.log(TL);
+        var TL = s.TL_Slope.toString().split(`, `).join(`, (`).split(`^`).join(`)^`);
+        TL = String.raw`\((${TL}\)`;
 
-        let new_row = `
+        let new_row = String.raw`
                     <tr>
                         <td>${s.q.toString()}</td>
                         <td>(${s.Signature.toString().split(',').join(', ')})</td>
@@ -179,7 +141,7 @@ async function filter_data() {
                         <td>${s.StratumDim.toString()}</td>
                         <td>${s.Words.join(', ')}</td>
                         <td>[${s.EO_Type.toString().split(',').join(', ')}]</td>
-                        <td>${s.Harashita_Slope.toString().split(',').join('/')}</td>
+                        <td>\(${s.Harashita_Slope.toString().split(',').join('/')}\)</td>
                         <td>[${TL}]</td>
                         <td>${String(s.Indecomposable).charAt(0).toUpperCase() + String(s.Indecomposable).slice(1)}</td>
                         <td>${s.SS_Locus_Interaction}</td>`;
