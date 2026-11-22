@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <style>
+       th, td {
+        border: 1px solid rgb(160 160 160);
+        padding: 8px 10px;
+        }
+
+        p, select, a, input[type=checkbox], input[type=reset], input[type=number] {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+        }
+
+        th[scope="row"] {
+            background-color: white;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        tr:nth-of-type(even) {
+            background-color: rgba(255, 192, 203, 0.25);
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.5vw;
+            background: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3vw;
+            border: 3px solid pink; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2 {
+            font-size: 1.5vw;
+            background: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3vw;
+            border: 3px solid pink; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+    <head>
+        <h1>Kraft Diagram Database (\(A_g\))</h1>
+
+        <!-- IMPORT JAVASCRIPT-->
+        <script src="Ag_functions.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <a href="index.html">Back to Home</a>
+        <br>
+        <a href="stratification_diagrams.html">Check out the Stratification Diagram Page!</a>
+
+        <form id="filter">
+        <p>Sort by Dimension: q 
+        <select name="q_filter" id="q_filter" onchange="filter_data()">
+            <option value="eq" selected="selected">=</option>
+            <option value="le">&le;</option>
+            <option value="ge">&ge;</option>
+        </select>
+        <select name="q" id="q" onchange="filter_data()">
+            <option value="all">All q</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected="selected">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        </p>
+
+        <p>
+        Indecomposable?
+        <input type="checkbox" id="Indecomposable" onchange="filter_data()"> <b>Note: This may be incorrect.</b>
+        </p>
+
+        <p>
+            Interaction with the SS Locus
+            <select name="SS Locus" id="SS Locus" onchange="filter_data()">
+                <option value="all" selected="selected">All Interactions</option>
+                <option value="Disjoint">Disjoint</option>
+                <option value="Contained In">Contained In</option>
+                <option value="Intersects">Intersects</option>
+                <option value="Not Contained">Not Contained</option>
+            </select>
+        </p>
+        
+        <p>
+        Display Kraft Diagrams:
+        <input type="checkbox" id="display_diagrams" onchange="filter_data()"> <b>Note: Not yet implemented.</b>
+        </p>
+
+        <p>
+        Display Adjacency Matrices:
+        <input type="checkbox" id="display_matrices" onchange="filter_data()"> <b>Note: Not yet implemented.</b>
+        </p>
+        
+        <p>
+        Display Strata (All, Nonempty, Empty):
+        <select name="which_strata" id="which_strata" onchange="filter_data()">
+            <option value="all" selected>All Strata</option>
+            <option value="nonempty">Display Only Non-Empty Strata</option>
+            <option value="empty">Display Only Empty Strata</option>
+        </select>
+        </p>
+
+        <p><input type="reset" onclick="filter_data()"/></p>
+        </form>
+
+        <!-- Create a table to store all of the strata information -->
+        <table id="strata">
+            <thead id="strata-head">
+            </thead>
+            <tbody id="strata-body">
+            </tbody>
+        </table>
+    </body>
+</html>
