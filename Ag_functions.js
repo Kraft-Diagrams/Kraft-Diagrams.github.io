@@ -30,9 +30,7 @@ async function filter_data() {
                 <th>TL Slope</th>
                 <th>SS Locus</th>
                 <th>Indecomposible</th>
-                <th>Associated Sigatures</th>
-                <th>Associated \(\gamma\) Indices</th>
-                <th>Associated Stratum Dimensions</th>`;
+                <th>Associated Stratum</th>`;
 
   if (draw_matrices) {
     head_row += `
@@ -133,6 +131,7 @@ async function filter_data() {
     })
 );
 
+  // Fill in the table
   Object.entries(filtered_strata).forEach(([EO_Type, Properties]) => {        
         if (Properties.Words == null){
           var table_row = String.raw`
@@ -144,10 +143,14 @@ async function filter_data() {
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>`;
+              <td></td>`;
+
+              if (draw_matrices){
+                table_row += `
+                <td></td>
+                <td></td>`;
+              }
+            table_row += `</tr>`;
         } else {
           var strata_id = "EO-".concat(EO_Type);
           var TL = Properties.TL_Slopes.toString().split(`, `).join(`, (`).split(`^`).join(`)^`);
@@ -162,12 +165,39 @@ async function filter_data() {
               <td>[${TL}]</td>
               <td>${Properties.SS_Locus_Interaction}</td>
               <td>${String(Properties.Indecomposable).charAt(0).toUpperCase() + String(Properties.Indecomposable).slice(1)}</td>
-              <td><ul><li>${Properties.Signatures.join("</li><li>")}</li></ul></td>
-              <td><ul><li>${Properties.Indices.join("</li><li>")}</li></ul></td>
-              <td><ul><li>${Properties.StrataDim.join("</li><li>")}</li></ul></td>
-            </tr>`;
+              <td><table>
+                <thead>
+                  <th>Signature</th>
+                  <th>\(\gamma\) Indices</th>
+                  <th>Stratum Dimension</th>
+                </thead>
+                <tbody id="${strata_id}-associated">
+                </tbody>
+              </table></td>`;
+              if (draw_matrices){
+                let F_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(Properties.q))}|}${Properties.F_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
+                let V_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(Properties.q))}|}${Properties.V_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
+                table_row += `
+                        <td>${F_matrix}</td>
+                        <td>${V_matrix}</td>
+                    `;
+              }
+            table_row += `</tr>`;
         }
         table_body.insertAdjacentHTML("beforeend", table_row);
         MathJax.typeset();
+
+        for (var i = 0; i < Properties.Signatures.length; i++){
+          var associated_body = document.getElementById(`${strata_id}-associated`);
+          var associated_row = String.raw`
+          <tr>
+            <td>${Properties.Signatures[i]}</td>
+            <td>${Properties.Indices[i]}</td>
+            <td>${Properties.StrataDim[i]}</td>
+          </tr>
+          `;
+          associated_body.insertAdjacentHTML("beforeend", associated_row);
+          MathJax.typeset();
+        }
   });
 }
