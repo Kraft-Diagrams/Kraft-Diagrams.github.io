@@ -271,7 +271,7 @@ async function draw_kraft_diagram(strata_id) {
     }
 
     // Next, draw the nodes
-    for (var i = 1; i <= strata.q; i++){
+    for (var i = 1; i <= EO_Type.split(",").length; i++){
         var x1 = 100;
         var x2 = 300;
         
