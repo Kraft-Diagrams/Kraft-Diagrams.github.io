@@ -175,8 +175,8 @@ async function filter_data() {
                 </tbody>
               </table></td>`;
               if (draw_matrices){
-                let F_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(Properties.q))}|}${Properties.F_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
-                let V_matrix = String.raw`\[\begin{array}{|${"c".repeat(Number(Properties.q))}|}${Properties.V_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
+                let F_matrix = String.raw`\[\begin{array}{|${"c".repeat(EO_Type.split(",").length)}|}${Properties.F_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
+                let V_matrix = String.raw`\[\begin{array}{|${"c".repeat(EO_Type.split(",").length)}|}${Properties.V_Matrix.split(',').join('&').split(';').join('\\\\')}\end{array}\]`;
                 table_row += `
                         <td>${F_matrix}</td>
                         <td>${V_matrix}</td>
