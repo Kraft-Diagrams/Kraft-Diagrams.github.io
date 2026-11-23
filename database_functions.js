@@ -130,8 +130,9 @@ async function filter_data() {
 
     for (s of filtered_strata) {
         var strata_id = "strata-".concat(s.q.toString().concat('__', s.Strata.toString().split(',').join('_')));
-        var TL = s.TL_Slope.toString().split(`, `).join(`, (`).split(`^`).join(`)^`);
-        TL = String.raw`\((${TL}\)`;
+        var TL = s.TL_Slope.toString().split(`, `).join(`}, (`).split(`^`).join(`)^{`);
+        TL = String.raw`\((${TL}}\)`;
+        MathJax.typeset();
 
         let new_row = String.raw`
                     <tr>
