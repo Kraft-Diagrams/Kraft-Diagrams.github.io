@@ -419,7 +419,7 @@ async function draw_stratification_diagram() {
 async function draw_partial_diagram(clicked_x, clicked_y) {
 
     var add_button = document.getElementById("add-reset-button");
-    add_button.innerHTML += `<button onClick="draw_stratification_diagram()">Reset Diagram</button>`
+    add_button.innerHTML = `<button onClick="draw_stratification_diagram()">Reset Diagram</button>`
 
     // clicked_x and clicked_y should be the signature clicked.
 
