@@ -178,8 +178,8 @@ def plot_diagram(diagram, gamma=None):
 
     # Label the figure
     if not (a == 0 and b == 0 and len(gamma) == 0):
-        plt.title(f"Signature ({a}, {b})\n$\\gamma_{{{", ".join([str(i) for i in gamma])}}}$", fontsize=16)
-    plt.savefig(f"kraft-diagrams/q{q}__{"_".join([str(i) for i in gamma])}.png")
+        plt.title(f"Signature ({a}, {b})\n$\\gamma_{{{', '.join([str(i) for i in gamma])}}}$", fontsize=16)
+    plt.savefig(f"kraft-diagrams/q{q}__{'_'.join([str(i) for i in gamma])}.png")
     plt.show()
 
 """
