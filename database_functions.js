@@ -96,16 +96,16 @@ async function filter_data() {
     var draw_matrices = document.getElementById("display_matrices").checked;
 
     var head_row = String.raw`<tr>
-                <th>Dimension q</th>
-                <th>Signature</th>
-                <th>\(\gamma\) Indices</th>
-                <th>Stratum Dimension</th>
-                <th>Word(s)</th>
-                <th>Elementary Sequence</th>
-                <th>Harashita Slope</th>
-                <th>TL Slope</th>
-                <th>Indecomposable</th>
-                <th>SS Locus</th>`;
+                <th>Dimension q <i class="fa fa-question-circle" id="q-info"></i></th>
+                <th>Signature <i class="fa fa-question-circle" id="signature-info"></i></th>
+                <th>\(\gamma\) Indices <i class="fa fa-question-circle" id="indices-info"></i></th>
+                <th>Stratum Dimension <i class="fa fa-question-circle" id="stratumdim-info"></i></th>
+                <th>Word(s) <i class="fa fa-question-circle" id="words-info"></i></th>
+                <th>Elementary Sequence <i class="fa fa-question-circle" id="EOType-info"></i></th>
+                <th>Harashita Slope <i class="fa fa-question-circle" id="HS-info"></i></th>
+                <th>TL Slope <i class="fa fa-question-circle" id="TL-info"></i></th>
+                <th>Indecomposable <i class="fa fa-question-circle" id="indecomposable-info"></i></th>
+                <th>SS Locus <i class="fa fa-question-circle" id="SSLocus-info"></i></th>`;
 
     if (draw_matrices){
         head_row += `
