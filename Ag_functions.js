@@ -95,8 +95,8 @@ async function filter_data() {
                 <th>Harashita Slope</th>
                 <th>TL Slope</th>
                 <th>SS Locus</th>
-                <th>Indecomposible</th>
-                <th>Associated Stratum</th>
+                <th>Indecomposable</th>
+                <th>Associated Unitary Stratum</th>
                 <tr>`;
   table_head.insertAdjacentHTML("beforeend", head_row);
 
