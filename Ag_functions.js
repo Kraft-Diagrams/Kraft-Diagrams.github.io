@@ -69,27 +69,6 @@ async function filter_data() {
     }),
   );
 
-  // Filter elements based on whether they have associated strata
-  filtered_strata = Object.fromEntries(
-    Object.entries(filtered_strata).filter(function (element) {
-      var which = document.getElementById("which_strata").value;
-      if (which == "all") {
-        return true;
-      }
-      if (which == "nonempty" && element[1].Indecomposable == null) {
-        return false;
-      } else if (which == "nonempty") {
-        return true;
-      }
-
-      if (which == "empty" && element[1].Indecomposable == null) {
-        return true;
-      } else if (which == "empty") {
-        return false;
-      }
-    }),
-  );
-
   // Filter elements based on how they interact with the SS Locus
   filtered_strata = Object.fromEntries(
     Object.entries(filtered_strata).filter(function (element) {
@@ -124,19 +103,21 @@ async function filter_data() {
   // Fill in the table
   Object.entries(filtered_strata).forEach(([EO_Type, Properties]) => {
 
+    // I only want to first half of the EO Type, because the second half I can base on the symmetry property
+    var Elem_Seq = EO_Type.split(",").slice(0, Math.ceil(EO_Type.split(`,`).length)/2).join(", ");
+
     var TL = Properties.TL_Slopes.toString()
         .split(`, `)
         .join(`}, (`)
         .split(`^`)
         .join(`)^{`);
     TL = String.raw`\((${TL}}\)`;
-    var Elem_Seq = EO_Type.split(",").slice(0, Math.ceil(EO_Type.split().length)/2)
 
     var table_row = String.raw`
               <td>${Number(Elem_Seq.length)}</td>
-              <td>[${Elem_Seq.join(", ")}]</td>
-              <td>[${Properties.Words.join(", ")}]</td>
-              <td>[${Properties.Weyl_Coset.join(", ")}]</td>
+              <td>[${Elem_Seq}]</td>
+              <td>[${Properties.Words.split(",").join(", ")}]</td>
+              <td>[${Properties.Weyl_Coset.split(",").join(", ")}]</td>
               <td>\(${Properties.HS_Slope.toString().split(",").join("/")}\)</td>
               <td>[${TL}]</td>
               <td>${Properties.SS_Locus_Interaction}</td>
@@ -148,7 +129,7 @@ async function filter_data() {
       table_body.insertAdjacentHTML("beforeend", table_row);
       MathJax.typeset();
     } else {
-      var strata_id = "EO--".concat(Elem_Seq.join("-"));
+      var strata_id = "EO--".concat(Elem_Seq.split(", ").join("-"));
       table_row += String.raw`
               <td><table>
                 <thead>
