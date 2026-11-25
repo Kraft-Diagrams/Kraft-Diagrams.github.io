@@ -107,7 +107,7 @@ async function filter_data() {
     var Elem_Seq = EO_Type.split(",").slice(0, Math.ceil(EO_Type.split(`,`).length)/2).join(", ");
 
     var TL = Properties.TL_Slopes.toString()
-        .split(`, `)
+        .split(`,`)
         .join(`}, (`)
         .split(`^`)
         .join(`)^{`);
