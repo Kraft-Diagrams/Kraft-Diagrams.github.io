@@ -114,7 +114,7 @@ async function filter_data() {
     TL = String.raw`\((${TL}}\)`;
 
     var table_row = String.raw`
-              <td>${Number(Elem_Seq.length)}</td>
+              <td>${Number(EO_Type.split(",").length/2)}</td>
               <td>[${Elem_Seq}]</td>
               <td>[${Properties.Words.split(",").join(", ")}]</td>
               <td>[${Properties.Weyl_Coset.split(",").join(", ")}]</td>
